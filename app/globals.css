@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+}
+
+body {
+  background-color: black;
+}
+
+@layer base {
+  :root {
+    --font-cookie: "Cookie", cursive;
+  }
+}
+
+@layer utilities {
+  .font-cookie {
+    font-family: var(--font-cookie);
+  }
+
+  .hover-nav {
+    @apply rounded-md mr-4 pl-3 pt-3 pb-3 hover:bg-neutral-900 active:scale-95 cursor-pointer;
+  }
+}
