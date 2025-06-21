@@ -1,15 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-}
-
-body {
-  background-color: black;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
 }
 
 @layer base {
   :root {
     --font-cookie: "Cookie", cursive;
+    --background: 0 0 98%;
+    --foreground: 0 0% 0%;
+    --hover: 0 0% 93%;
+    --border: 0 0% 0% / 0.1;
+  }
+
+  .dark {
+    --background: 0 0 0%;
+    --foreground: 0 0% 100%;
+    --hover: 0 0% 13%;
+    --border: 0 0% 100% / 0.1;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
@@ -19,6 +32,37 @@ body {
   }
 
   .hover-nav {
-    @apply rounded-md mr-4 pl-3 pt-3 pb-3 hover:bg-neutral-900 active:scale-95 cursor-pointer;
+    @apply rounded-md mr-0 pl-3 pt-3 pb-3 active:scale-95 hover:scale-105 cursor-pointer;
+    background-color: transparent;
+  }
+
+  .hover-nav:hover {
+    background-color: hsl(var(--hover));
+  }
+
+  .hover-icon {
+    @apply rounded-md p-3 active:scale-95 hover:scale-105 cursor-pointer;
+    background-color: transparent;
+  }
+
+  .hover-icon:hover {
+    background-color: hsl(var(--hover));
+  }
+
+  .border-theme {
+    border-color: hsl(var(--border));
+  }
+
+  .hover-nav-mobile {
+    @apply rounded-md pl-6 pr-6 pt-3 pb-3 active:scale-95 hover:scale-105 cursor-pointer;
+    background-color: transparent;
+  }
+
+  .hover-nav-mobile:hover {
+    background-color: hsl(var(--hover));
+  }
+
+  .nav-theme {
+    background-color: hsl(var(--border));
   }
 }

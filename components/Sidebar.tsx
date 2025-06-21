@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { GithubIcon, Linkedin, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utilis";
 import React, { useState } from "react";
 import {
@@ -11,6 +11,7 @@ import {
   User,
   Lightbulb,
 } from "lucide-react";
+import { ThemeToggle } from "./Themetoggle";
 
 const navItems = [
   { name: "Home", href: "#select-profile", icon: Home },
@@ -27,8 +28,8 @@ const Sidebar = () => {
   return (
     <>
       {/* DESKTOP SIDEBAR */}
-      <aside className="hidden md:flex fixed top-0 left-0 h-screen w-64 flex-col border-r border-white/35 text-white bg-black z-40 px-5 pt-10">
-        <a href="#hero" className="text-3xl font-cookie font-bold mb-10">
+      <aside className="hidden md:flex fixed top-0 left-0 h-screen w-62 flex-col border-r z-40 px-5 pt-10 border-theme">
+        <a href="#hero" className="text-3xl font-cookie font-bold mb-10 pl-3">
           Tomiwa Jinadu
         </a>
 
@@ -43,37 +44,94 @@ const Sidebar = () => {
               <span>{name}</span>
             </a>
           ))}
+          <div className="flex flex-col items-center gap-4 mt-16 mr-40">
+            <ThemeToggle />
+            <a
+              className="hover-icon"
+              href="https://www.linkedin.com/in/oluwatomiwa-jinadu/"
+              target="
+              blank_"
+            >
+              <Linkedin size={24} name="Linkedin" />
+            </a>
+            <a
+              className="hover-icon"
+              href="https://github.com/Tomiwajin"
+              target="blank_"
+            >
+              <GithubIcon size={24} />
+            </a>
+          </div>
         </nav>
       </aside>
 
-      {/* MOBILE MENU BUTTON (top right) */}
+      {/* MOBILE MENU BUTTON  */}
       <button
         onClick={() => setIsMenuOpen((prev) => !prev)}
-        className="fixed top-5 right-5 md:hidden p-2 text-white z-50"
+        className="fixed top-5 right-5 md:hidden p-2 z-50 hover:scale-105 active:scale-95"
       >
         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
+      <div>
+        <a
+          href="#hero"
+          className=" fixed top-5 left-5  md:hidden p-2 text-3x font-extrabold font-mono"
+        >
+          TJ
+        </a>
+      </div>
+
+      {isMenuOpen && (
+        <div
+          onClick={() => setIsMenuOpen(false)}
+          className="fixed inset-0 nav-theme z-30 transition-opacity duration-300 md:hidden"
+        />
+      )}
+
       {/* MOBILE NAV OVERLAY */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8 px-6 text-white transition-all duration-300 md:hidden",
-          isMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+          "fixed top-0 left-0 h-full w-62 nav-theme backdrop-blur-lg z-40 flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-in-out md:hidden",
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
+        <a
+          href="#hero"
+          className="text-4xl font-cookie font-bold mb-10 pl-3 mt-30"
+        >
+          Tomiwa Jinadu
+        </a>
+
         {navItems.map(({ name, href, icon: Icon }) => (
           <a
             key={name}
             href={href}
             onClick={() => setIsMenuOpen(false)}
-            className="flex items-center gap-4 text-xl hover-nav"
+            className="flex items-center gap-4 text-xl hover-nav-mobile"
           >
             <Icon size={28} />
             <span>{name}</span>
           </a>
         ))}
+        <div className="flex items-center gap-6 mt-20">
+          <ThemeToggle />
+          <a
+            className="hover-icon"
+            href="https://www.linkedin.com/in/oluwatomiwa-jinadu/"
+            target="
+              blank_"
+          >
+            <Linkedin size={24} name="Linkedin" />
+          </a>
+          <a
+            className="hover-icon"
+            href="https://github.com/Tomiwajin"
+            target="blank_"
+          >
+            <GithubIcon size={24} />
+          </a>
+        </div>
       </div>
     </>
   );

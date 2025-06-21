@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-hover-card": "^1.1.14",
     "clsx": "^2.1.1",
     "lucide-react": "^0.518.0",
+    "motion": "^12.18.1",
     "next": "^15.3.4",
+    "qss": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.3.1"
