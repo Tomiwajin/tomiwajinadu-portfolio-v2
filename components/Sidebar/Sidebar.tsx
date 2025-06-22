@@ -1,6 +1,7 @@
 "use client";
 
 import { GithubIcon, Linkedin, Menu, X } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utilis";
 import React, { useState } from "react";
 import {
@@ -11,15 +12,15 @@ import {
   User,
   Lightbulb,
 } from "lucide-react";
-import { ThemeToggle } from "./Themetoggle";
+import { ThemeToggle } from "../ThemeToggle/Themetoggle";
 
 const navItems = [
-  { name: "Home", href: "#select-profile", icon: Home },
-  { name: "Professional", href: "#professional", icon: Briefcase },
-  { name: "Projects", href: "#projects", icon: Folder },
-  { name: "Contact", href: "#contact", icon: MessageSquare },
-  { name: "Skills", href: "#skills", icon: Lightbulb },
-  { name: "Profile", href: "#profile", icon: User },
+  { name: "Home", href: "/", icon: Home },
+  { name: "Professional", href: "/professional", icon: Briefcase },
+  { name: "Projects", href: "/projects", icon: Folder },
+  { name: "Contact", href: "/contact", icon: MessageSquare },
+  { name: "Skills", href: "/skills", icon: Lightbulb },
+  { name: "Profile", href: "/profile", icon: User },
 ];
 
 const Sidebar = () => {
@@ -35,14 +36,14 @@ const Sidebar = () => {
 
         <nav className="flex flex-col gap-6">
           {navItems.map(({ name, href, icon: Icon }) => (
-            <a
+            <Link
               key={name}
               href={href}
               className="flex items-center gap-4 hover-nav"
             >
               <Icon size={24} />
               <span>{name}</span>
-            </a>
+            </Link>
           ))}
           <div className="flex flex-col items-center gap-4 mt-16 mr-40">
             <ThemeToggle />
@@ -104,7 +105,7 @@ const Sidebar = () => {
         </a>
 
         {navItems.map(({ name, href, icon: Icon }) => (
-          <a
+          <Link
             key={name}
             href={href}
             onClick={() => setIsMenuOpen(false)}
@@ -112,7 +113,7 @@ const Sidebar = () => {
           >
             <Icon size={28} />
             <span>{name}</span>
-          </a>
+          </Link>
         ))}
         <div className="flex items-center gap-6 mt-20">
           <ThemeToggle />
