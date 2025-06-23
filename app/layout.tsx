@@ -4,6 +4,7 @@ import "./globals.css";
 import InitialLoader from "@/components/Loaders/InitialLoader";
 import Visibility from "@/components/Sidebar/Visibilty";
 import PageSwitchLoader from "@/components/Loaders/PageSwitchLoader";
+import { ViewerProvider } from "@/components/Context/ViewerProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,8 +39,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <InitialLoader />
-        <PageSwitchLoader />
-        <Visibility> {children}</Visibility>
+        <ViewerProvider>
+          <PageSwitchLoader />
+          <Visibility> {children}</Visibility>
+        </ViewerProvider>
       </body>
     </html>
   );
