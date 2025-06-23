@@ -66,3 +66,16 @@
     background-color: hsl(var(--border));
   }
 }
+@keyframes gradientMove {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 1s ease-in-out forwards;
+  background-size: 200% 100%;
+}
