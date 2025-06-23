@@ -3,19 +3,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function InitialLoader() {
+export default function Initial() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const hasVisited = sessionStorage.getItem("hasVisited");
-
-    if (hasVisited) {
-      setIsLoading(false);
-    } else {
-      sessionStorage.setItem("hasVisited", "true");
-      const timer = setTimeout(() => setIsLoading(false), 3000);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
