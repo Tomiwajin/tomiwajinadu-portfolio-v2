@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cookie } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar/Sidebar";
 import InitialLoader from "@/components/InitialLoader";
+import Visibility from "@/components/Sidebar Visibility/Visibilty";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,8 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <InitialLoader />
-        <Sidebar />
-        {children}
+        <Visibility> {children}</Visibility>
       </body>
     </html>
   );
