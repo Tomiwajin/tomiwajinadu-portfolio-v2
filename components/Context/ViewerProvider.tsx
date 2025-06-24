@@ -1,5 +1,6 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+
+import { createContext, useContext, useEffect, useState } from "react";
 
 type ViewerType = "recruiter" | "developer" | "stalker" | null;
 
@@ -14,7 +15,27 @@ const ViewerContext = createContext<{
 export const useViewer = () => useContext(ViewerContext);
 
 export function ViewerProvider({ children }: { children: React.ReactNode }) {
-  const [viewer, setViewer] = useState<ViewerType>(null);
+  const [viewer, setViewerState] = useState<ViewerType>(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("viewer");
+    if (
+      stored === "developer" ||
+      stored === "recruiter" ||
+      stored === "stalker"
+    ) {
+      setViewerState(stored);
+    }
+  }, []);
+
+  const setViewer = (viewer: ViewerType) => {
+    setViewerState(viewer);
+    if (viewer) {
+      localStorage.setItem("viewer", viewer);
+    } else {
+      localStorage.removeItem("viewer");
+    }
+  };
 
   return (
     <ViewerContext.Provider value={{ viewer, setViewer }}>
