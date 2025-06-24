@@ -29,7 +29,7 @@ const Sidebar = () => {
   return (
     <>
       {/* DESKTOP SIDEBAR */}
-      <aside className="hidden md:flex fixed top-0 left-0 h-screen w-62 flex-col border-r z-40 px-5 pt-10 border-theme">
+      <aside className="hidden md:flex h-screen w-62 flex-col border-r z-40 px-5 pt-10 border-theme">
         <a href="#hero" className="text-3xl font-cookie font-bold mb-10 pl-3">
           Tomiwa Jinadu
         </a>
