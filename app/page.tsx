@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useViewer } from "@/components/Context/ViewerProvider";
+import { ThemeToggle } from "@/components/ThemeToggle/Themetoggle";
 
 export default function HomePage() {
   const { setViewer } = useViewer();
@@ -9,23 +10,62 @@ export default function HomePage() {
 
   const handleSelect = (viewer: "recruiter" | "developer" | "stalker") => {
     setViewer(viewer);
-    router.push("/professional");
+    router.push("/profile");
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-6">
-      <h1 className="text-4xl font-bold">Welcome! Who are you?</h1>
-      <div className="flex gap-4">
-        <button onClick={() => handleSelect("recruiter")} className="btn">
-          Recruiter
+    <div className="flex flex-col items-center justify-center mt-40 gap-6">
+      <h1 className="text-2xl md:text-4xl font-bold">
+        Hi, Who are you viewing as?
+      </h1>
+      <div className="flex  flex-col gap-4 mt-10">
+        <button
+          onClick={() => handleSelect("recruiter")}
+          className="flex items-center justify-between w-full px-20 py-3 rounded-xl border border-theme hover hover:scale-105 active:scale-95 transition"
+        >
+          <div className="flex items-center gap-3">
+            <img
+              src="Avatars/recruiter.jpeg"
+              alt="recuiter avatar"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+            <div className="text-left">
+              <div className="text-sm font-semibold">Recruiter</div>
+            </div>
+          </div>
         </button>
-        <button onClick={() => handleSelect("developer")} className="btn">
-          Developer
+        <button
+          onClick={() => handleSelect("developer")}
+          className="flex items-center justify-between w-full px-20 py-3 rounded-xl border border-theme hover hover:scale-105 active:scale-95 transition"
+        >
+          <div className="flex items-center gap-3">
+            <img
+              src="Avatars/developer.jpg"
+              alt="recuiter avatar"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+            <div className="text-left">
+              <div className="text-sm font-semibold">Developer</div>
+            </div>
+          </div>
         </button>
-        <button onClick={() => handleSelect("stalker")} className="btn">
-          Stalker
+        <button
+          onClick={() => handleSelect("stalker")}
+          className="flex items-center justify-between w-full px-20 py-3 rounded-xl border border-theme hover hover:scale-105 active:scale-95 transition"
+        >
+          <div className="flex items-center gap-3">
+            <img
+              src="Avatars/stalker.jpg"
+              alt="recuiter avatar"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+            <div className="text-left">
+              <div className="text-sm font-semibold">Stalker</div>
+            </div>
+          </div>
         </button>
       </div>
+      <ThemeToggle />
     </div>
   );
 }
