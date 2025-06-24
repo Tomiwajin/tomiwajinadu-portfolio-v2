@@ -31,6 +31,10 @@
     font-family: var(--font-cookie);
   }
 
+  .hover:hover {
+    background-color: hsl(var(--hover));
+  }
+
   .hover-nav {
     @apply rounded-md mr-0 pl-3 pt-3 pb-3 active:scale-95 hover:scale-105 cursor-pointer;
     background-color: transparent;

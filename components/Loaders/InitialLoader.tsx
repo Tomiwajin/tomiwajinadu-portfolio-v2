@@ -15,7 +15,7 @@ export default function Initial() {
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 bg-background z-50 flex items-center justify-center"
+          className="fixed inset-0 bg-background z-[9999] flex items-center justify-center"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
