@@ -67,7 +67,7 @@ const Sidebar = () => {
       </aside>
 
       {/* MOBILE MENU BUTTON  */}
-      <div className="fixed top w-full h-16 bg-black z-50">
+      <div className="fixed top w-full h-16 bg-background">
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="fixed top-5 right-5 md:hidden p-2 z-50 hover:scale-105 active:scale-95"
@@ -93,7 +93,7 @@ const Sidebar = () => {
       {/* MOBILE NAV OVERLAY */}
       <div
         className={cn(
-          "fixed top-0 left-0 h-full w-62 nav-theme backdrop-blur-lg z-40 flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed top-0 left-0 h-full w-62 nav-theme backdrop-blur-lg z-51 flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-in-out md:hidden",
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
