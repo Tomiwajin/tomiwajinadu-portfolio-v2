@@ -30,9 +30,10 @@ const Sidebar = () => {
     <>
       {/* DESKTOP SIDEBAR */}
       <aside className="fixed hidden md:flex h-screen w-62 flex-col border-r z-40 px-5 pt-10 border-theme">
-        <a href="#hero" className="text-3xl font-cookie font-bold mb-10 pl-3">
+        <Link href="/" className="text-3xl font-cookie font-bold mb-10 pl-3">
+          {" "}
           Tomiwa Jinadu
-        </a>
+        </Link>
 
         <nav className="flex flex-col gap-6">
           {navItems.map(({ name, href, icon: Icon }) => (
@@ -75,12 +76,12 @@ const Sidebar = () => {
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
         <div>
-          <a
-            href="#hero"
+          <Link
+            href="/"
             className=" fixed top-5 left-5  md:hidden p-2 text-3x font-extrabold font-mono"
           >
             TJ
-          </a>
+          </Link>
         </div>
         {isMenuOpen && (
           <div
