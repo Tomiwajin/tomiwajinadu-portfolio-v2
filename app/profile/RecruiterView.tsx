@@ -1,7 +1,8 @@
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
-import { Grid } from "lucide-react";
+import { Grid, Scale } from "lucide-react";
 import { PinContainer } from "@/components/ui/3d-pin";
+import Link from "next/link";
 
 const RecruiterView = () => {
   const words = ["detail", "impact", "ux"];
@@ -155,8 +156,14 @@ const RecruiterView = () => {
       {/* Mobile View */}
       <div className="md:hidden flex flex-col gap-12">
         <div className="flex flex-row w-full gap-2 -mt-10">
-          <div className="w-1/2 h-60 border"></div>
-          <div className="w-1/2 h-60 border relative overflow-hidden">
+          <Link
+            href="/about-me"
+            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+          ></Link>
+          <Link
+            href="/professional"
+            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+          >
             <img
               src="Posts/Experience.jpg"
               alt="Experience Post"
@@ -165,10 +172,13 @@ const RecruiterView = () => {
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <h2 className="text-white text-xl font-semibold">Experience</h2>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-row w-full gap-2 -mt-10">
-          <div className="w-1/2 h-60 border relative overflow-hidden">
+          <Link
+            href="/projects"
+            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+          >
             <img
               src="Posts/Projects.jpg"
               alt="Projects Post"
@@ -177,8 +187,11 @@ const RecruiterView = () => {
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <h2 className="text-white text-xl font-semibold">Projects</h2>
             </div>
-          </div>
-          <div className="w-1/2 h-60 border relative overflow-hidden">
+          </Link>
+          <Link
+            href="/hobbies"
+            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+          >
             <img
               src="Posts/Hobbies.jpg"
               alt="Hobbies Post"
@@ -187,10 +200,13 @@ const RecruiterView = () => {
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <h2 className="text-white text-xl font-semibold">Hobbies</h2>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-row w-full gap-2 -mt-10">
-          <div className="w-1/2 h-60 border relative overflow-hidden">
+          <Link
+            href="work-auth"
+            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+          >
             <img
               src="Posts/Work-Authorization.jpg"
               alt="Work-Auth Post"
@@ -201,8 +217,11 @@ const RecruiterView = () => {
                 Work Authorization
               </h2>
             </div>
-          </div>
-          <div className="w-1/2 h-60 border relative overflow-hidden">
+          </Link>
+          <Link
+            href="git-hub"
+            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+          >
             <img
               src="Posts/Git-Hub.jpg"
               alt="Git-Hub Post"
@@ -211,7 +230,7 @@ const RecruiterView = () => {
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <h2 className="text-white text-xl font-semibold">My Git-Hub</h2>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
