@@ -5,7 +5,7 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import Link from "next/link";
 
 const DeveloperView = () => {
-  const words = ["detail", "impact", "ux"];
+  const words = ["Efficiency", "usability", "scalability"];
 
   return (
     <div className="px-4 md:px-100 flex flex-col gap-20">
@@ -41,14 +41,14 @@ const DeveloperView = () => {
                 Email me
               </span>
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-full group-hover:translate-x-0">
-                Let's talk 💌
+                Let's collab 💌
               </span>
             </button>
           </div>
 
           <div>
             <div className="text-xl font-extrabold text-gray-500">
-              Front-End Developer
+              Software Developer
             </div>
             <div className="text-20 font-normal">
               I build responsive products <br />
@@ -71,11 +71,7 @@ const DeveloperView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts-dev/about-me.jpeg"
-                  alt="About-me"
-                  className="h-full w-full"
-                />
+                <img src="" alt="About-me" className="h-full w-full" />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <h2 className="text-white text-xl font-semibold">About me</h2>
                 </div>
@@ -83,16 +79,16 @@ const DeveloperView = () => {
             </PinContainer>
           </div>
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
-            <PinContainer title="/Experience" href="/professional">
+            <PinContainer title="/GitHub" href="/github">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <img
-                  src="Posts/Experience.jpg"
-                  alt="Experience Post"
+                  src="Posts/Git-Hub.jpg"
+                  alt="Git-Hub Post"
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <h2 className="text-white text-xl font-semibold">
-                    Experience
+                    My Git-Hub
                   </h2>
                 </div>
               </div>
@@ -129,16 +125,16 @@ const DeveloperView = () => {
             </PinContainer>
           </div>
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
-            <PinContainer title="/GitHub" href="/github">
+            <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <img
-                  src="Posts/Git-Hub.jpg"
-                  alt="Git-Hub Post"
+                  src="Posts/Experience.jpg"
+                  alt="Experience Post"
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <h2 className="text-white text-xl font-semibold">
-                    My Git-Hub
+                    Software Developer
                   </h2>
                 </div>
               </div>
@@ -152,18 +148,23 @@ const DeveloperView = () => {
           <Link
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
-          ></Link>
+          >
+            <img src="" alt="About-me" className="h-full w-full" />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <h2 className="text-white text-xl font-semibold">About Me</h2>
+            </div>
+          </Link>
           <Link
-            href="/professional"
+            href="git-hub"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <img
-              src="Posts/Experience.jpg"
-              alt="Experience Post"
-              className="h-full w-full object-cover"
+              src="Posts/Git-Hub.jpg"
+              alt="Git-Hub Post"
+              className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h2 className="text-white text-xl font-semibold">Experience</h2>
+              <h2 className="text-white text-xl font-semibold">My Git-Hub</h2>
             </div>
           </Link>
         </div>
@@ -197,31 +198,16 @@ const DeveloperView = () => {
         </div>
         <div className="flex flex-row w-full gap-2 -mt-10">
           <Link
-            href="work-auth"
+            href="/professional"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <img
-              src="Posts/Work-Authorization.jpg"
-              alt="Work-Auth Post"
-              className="h-full w-full"
+              src="Posts/Experience.jpg"
+              alt="Experience Post"
+              className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h2 className="text-white text-xl font-semibold">
-                Work Authorization
-              </h2>
-            </div>
-          </Link>
-          <Link
-            href="git-hub"
-            className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
-          >
-            <img
-              src="Posts/Git-Hub.jpg"
-              alt="Git-Hub Post"
-              className="h-full w-full"
-            />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h2 className="text-white text-xl font-semibold">My Git-Hub</h2>
+              <h2 className="text-white text-xl font-semibold">Experience</h2>
             </div>
           </Link>
         </div>

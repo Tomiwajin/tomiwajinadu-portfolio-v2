@@ -5,7 +5,7 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import Link from "next/link";
 
 const RecruiterView = () => {
-  const words = ["detail", "impact", "ux"];
+  const words = ["Efficiency", "usability", "scalability"];
 
   return (
     <div className="px-4 md:px-100 flex flex-col gap-20">
@@ -48,7 +48,7 @@ const RecruiterView = () => {
 
           <div>
             <div className="text-xl font-extrabold text-gray-500">
-              Front-End Developer
+              Software Developer
             </div>
             <div className="text-20 font-normal">
               I build responsive products <br />
