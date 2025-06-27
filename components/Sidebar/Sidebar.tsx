@@ -68,7 +68,7 @@ const Sidebar = () => {
       </aside>
 
       {/* MOBILE MENU BUTTON  */}
-      <div className="fixed top w-full h-16 bg-background">
+      <div className="md:hidden fixed top w-full h-16 bg-background">
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="fixed top-5 right-5 md:hidden p-2 z-50 hover:scale-105 active:scale-95"
