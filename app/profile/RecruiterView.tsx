@@ -1,6 +1,6 @@
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
-import { Grid, Scale } from "lucide-react";
+import { Grid, Volume2 } from "lucide-react";
 import { PinContainer } from "@/components/ui/3d-pin";
 import Link from "next/link";
 
@@ -16,7 +16,18 @@ const RecruiterView = () => {
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:px-10">
-          <div className="font-extrabold text-xl">Tomiwa Jinadu</div>
+          <div className="flex flex-row gap-2">
+            <div className="font-extrabold text-xl">Tomiwa Jinadu</div>
+            <div
+              onClick={() => {
+                const audio = new Audio("Audio/name_pron.mp3");
+                audio.play();
+              }}
+              className="hover:scale-105 active:scale-95"
+            >
+              <Volume2 />
+            </div>
+          </div>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <button
