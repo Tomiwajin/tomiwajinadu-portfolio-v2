@@ -148,7 +148,7 @@ const StalkerView = () => {
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <h2 className="text-white text-xl font-semibold">
-                    Software Developer
+                    Experience
                   </h2>
                 </div>
               </div>
