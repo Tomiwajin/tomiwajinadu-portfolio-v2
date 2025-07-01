@@ -8,7 +8,7 @@ const DeveloperView = () => {
   const words = ["Efficiency", "usability", "scalability"];
 
   return (
-    <div className="px-4 md:px-100 flex flex-col gap-20">
+    <div className="pl-4 md:pl-100 flex flex-col gap-20">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
           <div className="bg-background rounded-full w-24 h-24 md:w-44 md:h-44 flex items-center justify-center">
