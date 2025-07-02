@@ -77,9 +77,12 @@ const Page = () => {
   const filteredProjects = projects.filter((project) => {
     const matchCategory =
       selectedCategory === "All" || project.category === selectedCategory;
-    const matchSearch = project.title
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+    const matchSearch =
+      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     return matchCategory && matchSearch;
   });
 
