@@ -25,6 +25,7 @@ const navItems = [
 
 const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   return (
     <>
@@ -40,7 +41,11 @@ const Sidebar = () => {
             <Link
               key={name}
               href={href}
-              className="flex items-center gap-4 hover-nav"
+              onClick={() => setSelectedCategory(name)}
+              className={cn(
+                "flex items-center gap-4 hover-nav",
+                selectedCategory === name ? "bg-selected" : "border-theme"
+              )}
             >
               <Icon size={24} />
               <span>{name}</span>

@@ -74,6 +74,11 @@
     background-color: hsl(var(--hover));
     border-color: hsl(var(--hover));
   }
+
+  .bg-selected {
+    background-color: hsl(var(--hover));
+    border-color: hsl(var(--hover));
+  }
 }
 @keyframes gradientMove {
   0% {
