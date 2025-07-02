@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const page = () => {
   return (
@@ -26,6 +35,22 @@ const page = () => {
           </div>
           <div className="hidden md:block px-10 py-2 rounded-md border-2 border-theme">
             JavaDev
+          </div>
+          <div className="md:hidden">
+            <Select>
+              <SelectTrigger className="px-2 py-5">
+                <SelectValue placeholder="All" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectItem value="apple">All</SelectItem>
+                  <SelectItem value="banana">webDev</SelectItem>
+                  <SelectItem value="blueberry">MobileDev</SelectItem>
+                  <SelectItem value="grapes">ML</SelectItem>
+                  <SelectItem value="pineapple">JavaDev</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
           </div>
         </div>
       </div>
