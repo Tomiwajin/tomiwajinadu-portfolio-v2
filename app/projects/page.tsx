@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -9,53 +11,178 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const page = () => {
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+
+const categories = ["All", "webDev", "MobileDev", "ML", "JavaDev"];
+
+const projects = [
+  {
+    id: 1,
+    title: "TomiwaJinadu Portfolio-V1",
+    description:
+      "My personal portfolio built with React, Vite, and Tailwind CSS...",
+    image: "projects/project5.png",
+    tags: ["React", "Vite", "Tailwind CSS"],
+    demoUrl: "https://tomiwa-jinadu-portfolio-v1.vercel.app",
+    githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
+    category: "webDev",
+  },
+  {
+    id: 2,
+    title: "Task Manager Desktop App",
+    description: "A JavaFX-based task management desktop application...",
+    image: "projects/project3.png",
+    tags: ["Java", "JavaFX", "Maven"],
+    demoUrl: "https://task-manager-nr9n.onrender.com",
+    githubUrl: "https://github.com/Tomiwajin/Task-Manager.git",
+    category: "JavaDev",
+  },
+  {
+    id: 3,
+    title: "Multithreaded File Transfer System",
+    description: "A Rust-based client-server file transfer system...",
+    image: "projects/project1.png",
+    tags: ["Rust", "TCP", "Multithreading"],
+    demoUrl: "https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git",
+    githubUrl:
+      "https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git",
+    category: "JavaDev",
+  },
+  {
+    id: 4,
+    title: "House Price Prediction ML App",
+    description: "Built a regression model using Scikit-learn to predict...",
+    image: "projects/project2.png",
+    tags: ["Python", "Machine Learning", "Render"],
+    demoUrl: "https://house-price-prediction-gzd4.onrender.com",
+    githubUrl: "https://github.com/Tomiwajin/House-price-prediction",
+    category: "ML",
+  },
+  {
+    id: 5,
+    title: "Carpool Web App",
+    description: "A responsive ride-sharing website...",
+    image: "projects/project4.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://tomiwajin.github.io/OluwatomiwaJinadu_Project/",
+    githubUrl: "https://github.com/Tomiwajin/OluwatomiwaJinadu_Project.git",
+    category: "webDev",
+  },
+];
+
+const Page = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProjects = projects.filter((project) => {
+    const matchCategory =
+      selectedCategory === "All" || project.category === selectedCategory;
+    const matchSearch = project.title
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    return matchCategory && matchSearch;
+  });
+
   return (
-    <div className="md:pl-70 flex flex-col gap-20 py-12 md:py-0 ">
-      <div className="flex flex-col">
-        <div className="flex flex-row gap-6">
-          <div className="hidden md:block px-10 py-2 rounded-md border-2 border-theme">
-            All
-          </div>
-          <div className="hidden md:block px-10 py-2 rounded-md border-2 border-theme">
-            webDev
-          </div>
-          <div className="hidden md:block px-10 py-2 rounded-md border-2 border-theme">
-            MobileDev
-          </div>
-          <div>
-            <input
-              className="px-2 md:px-10 py-2 rounded-md border-2 border-theme focus:outline-none"
-              type="search"
-              placeholder="search"
-            ></input>
-          </div>
-          <div className="hidden md:block px-10 py-2 rounded-md border-2 border-theme">
-            ML
-          </div>
-          <div className="hidden md:block px-10 py-2 rounded-md border-2 border-theme">
-            JavaDev
-          </div>
-          <div className="md:hidden">
-            <Select>
-              <SelectTrigger className="px-2 py-5">
-                <SelectValue placeholder="All" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="apple">All</SelectItem>
-                  <SelectItem value="banana">webDev</SelectItem>
-                  <SelectItem value="blueberry">MobileDev</SelectItem>
-                  <SelectItem value="grapes">ML</SelectItem>
-                  <SelectItem value="pineapple">JavaDev</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
+    <div className="md:pl-70 flex flex-col  py-12 md:py-0">
+      <div className="flex flex-wrap items-center gap-4">
+        <div className="hidden md:flex flex-wrap gap-4">
+          {categories.map((category) => (
+            <div
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-2 rounded-md border-2 border-theme text-sm cursor-pointer hover:bg-muted transition-colors ${
+                selectedCategory === category ? "bg-muted" : ""
+              }`}
+            >
+              {category}
+            </div>
+          ))}
         </div>
+
+        <input
+          type="search"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="flex-1 min-w-[150px] px-4 py-2 rounded-md border-2 border-theme focus:outline-none"
+        />
+
+        <div className="md:hidden w-full">
+          <Select onValueChange={(val) => setSelectedCategory(val)}>
+            <SelectTrigger className="w-full px-4 py-2">
+              <SelectValue placeholder="Select Category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Categories</SelectLabel>
+                {categories.map((category) => (
+                  <SelectItem
+                    key={category}
+                    value={category}
+                    className="capitalize"
+                  >
+                    {category}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+        {filteredProjects.map((project) => (
+          <CardContainer key={project.id} className="inter-var">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white"
+              >
+                {project.title}
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                {project.description}
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src={project.image}
+                  height="1000"
+                  width="1000"
+                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+              <div className="flex justify-between items-center mt-20">
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.demoUrl}
+                  target="__blank"
+                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                >
+                  Demo →
+                </CardItem>
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.githubUrl}
+                  target="__blank"
+                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                >
+                  GitHub
+                </CardItem>
+              </div>
+            </CardBody>
+          </CardContainer>
+        ))}
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;
