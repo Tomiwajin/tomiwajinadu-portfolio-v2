@@ -20,7 +20,7 @@ const DeveloperView = () => {
             <div className="font-extrabold text-xl">Tomiwa Jinadu</div>
             <div
               onClick={() => {
-                const audio = new Audio("Audio/name_pron.mp3");
+                const audio = new Audio("Audio/name_pron.mp4");
                 audio.play();
               }}
               className="hover:scale-105 active:scale-95"

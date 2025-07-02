@@ -94,8 +94,8 @@ const Page = () => {
             <div
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-md border-2 border-theme text-sm cursor-pointer hover:bg-muted transition-colors ${
-                selectedCategory === category ? "bg-muted" : ""
+              className={`px-6 py-2 rounded-md border-2  cursor-pointer hover:bg-muted transition-colors ${
+                selectedCategory === category ? "bg-selected" : "border-theme"
               }`}
             >
               {category}
@@ -111,9 +111,9 @@ const Page = () => {
           className="flex-1 min-w-[150px] px-4 py-2 rounded-md border-2 border-theme focus:outline-none"
         />
 
-        <div className="md:hidden w-full">
-          <Select onValueChange={(val) => setSelectedCategory(val)}>
-            <SelectTrigger className="w-full px-4 py-2">
+        <div className="md:hidden">
+          <Select onValueChange={setSelectedCategory}>
+            <SelectTrigger className="px-2 py-5">
               <SelectValue placeholder="Select Category" />
             </SelectTrigger>
             <SelectContent>
