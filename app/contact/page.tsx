@@ -39,7 +39,8 @@ const ContactPage = () => {
       </div>
       <div className="flex flex-wrap md:text-xl justify-center items-center">
         I'm always up for a chat or coffee
-        <Coffee className="text-purple-500" />! Feel free to reach out.
+        <Coffee className="text-purple-500 hover:scale-110" />! Feel free to
+        reach out.
       </div>
     </div>
   );
