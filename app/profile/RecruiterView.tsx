@@ -19,6 +19,7 @@ const RecruiterView = () => {
           <div className="flex flex-row gap-2">
             <div className="font-extrabold text-xl">Tomiwa Jinadu</div>
             <div
+              title="Pronounciation"
               onClick={() => {
                 const audio = new Audio("Audio/name_pron.mp4");
                 audio.play();
@@ -131,7 +132,7 @@ const RecruiterView = () => {
             </PinContainer>
           </div>
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
-            <PinContainer title="/work auth" href="/work auth">
+            <PinContainer title="/work auth" href="/work-auth">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <img
                   src="Posts/Work-Authorization.jpg"
@@ -147,7 +148,7 @@ const RecruiterView = () => {
             </PinContainer>
           </div>
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
-            <PinContainer title="/GitHub" href="/github">
+            <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <img
                   src="Posts/Git-Hub.jpg"
