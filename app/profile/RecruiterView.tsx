@@ -11,9 +11,11 @@ const RecruiterView = () => {
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
-          <div className="bg-background rounded-full w-24 h-24 md:w-44 md:h-44 flex items-center justify-center">
-            <div className="bg-background rounded-full w-20 h-20 md:w-40 md:h-40" />
-          </div>
+          <img
+            src="Profile-pic/placeholder.JPG"
+            alt="Projects Post"
+            className="rounded-full w-20 h-20 md:w-40 md:h-40"
+          />
         </div>
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:px-10">
           <div className="flex flex-row gap-2">
@@ -82,7 +84,14 @@ const RecruiterView = () => {
         <div className="hidden md:flex flex-row gap-8">
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/About Me" href="/about-me">
-              <div className="tracking-tight w-[16rem] h-[24rem]"></div>
+              <div className="tracking-tight w-[16rem] h-[24rem]">
+                {" "}
+                <img
+                  src="/Posts/about-me.jpg"
+                  alt="About me Post"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </PinContainer>
           </div>
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
@@ -168,6 +177,11 @@ const RecruiterView = () => {
       {/* Mobile View */}
       <div className="md:hidden flex flex-col gap-12">
         <div className="flex flex-row w-full gap-2 -mt-10">
+          <img
+            src="/Posts/about-me.jpg"
+            alt="About me Post"
+            className="h-full w-full object-cover"
+          />
           <Link
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
@@ -231,8 +245,9 @@ const RecruiterView = () => {
             </div>
           </Link>
           <Link
-            href="git-hub"
+            href="https://github.com/Tomiwajin"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+            target="blank_"
           >
             <img
               src="Posts/Git-Hub.jpg"

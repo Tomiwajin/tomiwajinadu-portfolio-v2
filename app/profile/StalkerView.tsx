@@ -86,7 +86,11 @@ const StalkerView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img src="" alt="About-me" className="h-full w-full" />
+                <img
+                  src="Posts/Git-Hub.jpg"
+                  alt="About-me"
+                  className="h-full w-full"
+                />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <h2 className="text-white text-xl font-semibold">About me</h2>
                 </div>
@@ -164,14 +168,19 @@ const StalkerView = () => {
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img src="" alt="About-me" className="h-full w-full" />
+            <img
+              src="Posts/Git-Hub.jpg"
+              alt="About-me"
+              className="h-full w-full"
+            />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <h2 className="text-white text-xl font-semibold">About Me</h2>
             </div>
           </Link>
           <Link
-            href="git-hub"
+            href="https://github.com/Tomiwajin"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
+            target="blank_"
           >
             <img
               src="Posts/Git-Hub.jpg"

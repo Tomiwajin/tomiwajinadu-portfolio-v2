@@ -23,7 +23,7 @@ const page = () => {
             🏆 Built a Tournament Bracket Application in Java with dynamic match
             progression.
           </p>
-          <p className="mb-4 text-sm font-normal">
+          <div className="mb-4 text-sm font-normal">
             🚗 Developed a{" "}
             <LinkPreview
               url="https://tomiwajin.github.io/OluwatomiwaJinadu_Project/"
@@ -32,8 +32,8 @@ const page = () => {
               Carpool Website
             </LinkPreview>{" "}
             to connect local drivers and riders.
-          </p>
-          <p className="mb-4 text-sm font-normal">
+          </div>
+          <div className="mb-4 text-sm font-normal">
             ✅ Created a full-stack{" "}
             <LinkPreview
               url="https://task-manager-nr9n.onrender.com"
@@ -42,7 +42,7 @@ const page = () => {
               Task Manager
             </LinkPreview>{" "}
             web app with downloadable `.exe` installer.
-          </p>
+          </div>
         </div>
       ),
     },
