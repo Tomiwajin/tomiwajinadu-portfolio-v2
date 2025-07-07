@@ -83,7 +83,7 @@ const DeveloperView = () => {
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <img
-                  src="Posts/Git-Hub.jpg"
+                  src="/Posts/about-me.jpg"
                   alt="About-me"
                   className="h-full w-full"
                 />
@@ -165,7 +165,7 @@ const DeveloperView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <img
-              src="Posts/Git-Hub.jpg"
+              src="/Posts/about-me.jpg"
               alt="About-me"
               className="h-full w-full"
             />
