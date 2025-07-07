@@ -8,13 +8,13 @@ const page = () => {
       title: "2025",
       content: (
         <div>
-          <p className="mb-4 text-sm font-normal">
+          <div className="mb-4 text-sm font-normal">
             🎓 Graduated with a B.S. in Computing from the
             <LinkPreview url="https://www.westga.edu" className="font-bold">
               {" "}
               University of West Georgia.
             </LinkPreview>
-          </p>
+          </div>
           <p className="mb-4 text-sm font-normal">
             👨🏽‍💻 Software Engineering Intern at Bemelo Health – contributed to
             mobile development and AI feature prototyping.
