@@ -168,7 +168,7 @@ const Page = () => {
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                    className="px-4 py-2 rounded-xl text-xs font-normal text-white"
                   >
                     Demo →
                   </CardItem>
@@ -178,7 +178,7 @@ const Page = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                    className="px-4 py-2 rounded-xl text-white bg-indigo-500 text-xs font-bold"
                   >
                     GitHub
                   </CardItem>

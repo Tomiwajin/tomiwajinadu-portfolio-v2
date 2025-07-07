@@ -27,14 +27,14 @@ const medium = [
     title: "Connect with Me",
     description: "Tomiwa Jinadu",
     link: "https://www.linkedin.com/in/oluwatomiwa-jinadu/",
-    category: "Lindin",
+    category: "Linkdin",
   },
 ];
 
 const ContactPage = () => {
   return (
     <div className="md:flex flex-col">
-      <div className="pl-6 md:pl-76 flex flex-wrap mt-10 justify-between">
+      <div className="pl-6 md:pl-90 flex flex-wrap mt-10 justify-between">
         <HoverEffect items={medium} />
       </div>
       <div className="flex flex-wrap md:text-xl justify-center items-center">

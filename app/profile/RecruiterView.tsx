@@ -91,6 +91,9 @@ const RecruiterView = () => {
                   alt="About me Post"
                   className="h-full w-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <h2 className="text-white text-xl font-semibold">About me</h2>
+                </div>
               </div>
             </PinContainer>
           </div>
@@ -177,15 +180,19 @@ const RecruiterView = () => {
       {/* Mobile View */}
       <div className="md:hidden flex flex-col gap-12">
         <div className="flex flex-row w-full gap-2 -mt-10">
-          <img
-            src="/Posts/about-me.jpg"
-            alt="About me Post"
-            className="h-full w-full object-cover"
-          />
           <Link
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
-          ></Link>
+          >
+            <img
+              src="/Posts/about-me.jpg"
+              alt="About me Post"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <h2 className="text-white text-xl font-semibold">About Me</h2>
+            </div>
+          </Link>
           <Link
             href="/professional"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
