@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FlipWords } from "@/components/ui/flip-words";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { Grid, Volume2 } from "lucide-react";
+import Image from "next/image";
 
 const StalkerView = () => {
   const words = ["phone", "laptop", "Fridge"];
@@ -11,9 +12,11 @@ const StalkerView = () => {
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
-          <img
+          <Image
             src="Profile-pic/stalker.gif"
             alt="Projects Post"
+            width={256}
+            height={384}
             className="rounded-full w-20 h-20 md:w-40 md:h-40"
           />
         </div>
@@ -86,7 +89,7 @@ const StalkerView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
+                <Image
                   src="/Posts/about-me.jpg"
                   alt="About-me"
                   className="h-full w-full"
@@ -100,7 +103,7 @@ const StalkerView = () => {
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
+                <Image
                   src="Posts/Git-Hub.jpg"
                   alt="Git-Hub Post"
                   className="h-full w-full"
@@ -116,7 +119,7 @@ const StalkerView = () => {
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/projects" href="/projects">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
+                <Image
                   src="Posts/Projects.jpg"
                   alt="Projects Post"
                   className="h-full w-full"
@@ -132,7 +135,7 @@ const StalkerView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/hobbies" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
+                <Image
                   src="Posts/Hobbies.jpg"
                   alt="Hobbies Post"
                   className="h-full w-full"
@@ -146,7 +149,7 @@ const StalkerView = () => {
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
+                <Image
                   src="Posts/Experience.jpg"
                   alt="Experience Post"
                   className="h-full w-full"
@@ -168,7 +171,7 @@ const StalkerView = () => {
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
+            <Image
               src="/Posts/about-me.jpg"
               alt="About-me"
               className="h-full w-full"
@@ -182,7 +185,7 @@ const StalkerView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
             target="blank_"
           >
-            <img
+            <Image
               src="Posts/Git-Hub.jpg"
               alt="Git-Hub Post"
               className="h-full w-full"
@@ -197,7 +200,7 @@ const StalkerView = () => {
             href="/projects"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
+            <Image
               src="Posts/Projects.jpg"
               alt="Projects Post"
               className="h-full w-full"
@@ -210,7 +213,7 @@ const StalkerView = () => {
             href="/hobbies"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
+            <Image
               src="Posts/Hobbies.jpg"
               alt="Hobbies Post"
               className="h-full w-full"
@@ -225,7 +228,7 @@ const StalkerView = () => {
             href="/professional"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
+            <Image
               src="Posts/Experience.jpg"
               alt="Experience Post"
               className="h-full w-full object-cover"

@@ -105,7 +105,7 @@ const Sidebar = () => {
       >
         <a
           href="#hero"
-          className="text-4xl font-cookie font-bold mb-10 pl-3 mt-30"
+          className="text-2xl font-cookie font-bold mb-10 pl-3 mt-30"
         >
           Tomiwa Jinadu
         </a>

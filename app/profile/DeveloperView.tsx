@@ -3,6 +3,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Grid, Volume2 } from "lucide-react";
 import { PinContainer } from "@/components/ui/3d-pin";
 import Link from "next/link";
+import Image from "next/image";
 
 const DeveloperView = () => {
   const words = ["Efficiency", "usability", "scalability"];
@@ -82,9 +83,10 @@ const DeveloperView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
+                <Image
                   src="/Posts/about-me.jpg"
                   alt="About-me"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -96,9 +98,10 @@ const DeveloperView = () => {
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Git-Hub.jpg"
+                <Image
+                  src="/Posts/Git-Hub.jpg"
                   alt="Git-Hub Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -112,9 +115,10 @@ const DeveloperView = () => {
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/projects" href="/projects">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Projects.jpg"
+                <Image
+                  src="/Posts/Projects.jpg"
                   alt="Projects Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -128,9 +132,10 @@ const DeveloperView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/hobbies" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Hobbies.jpg"
+                <Image
+                  src="/Posts/Hobbies.jpg"
                   alt="Hobbies Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -142,9 +147,10 @@ const DeveloperView = () => {
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Experience.jpg"
+                <Image
+                  src="/Posts/Experience.jpg"
                   alt="Experience Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -164,9 +170,10 @@ const DeveloperView = () => {
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
+            <Image
               src="/Posts/about-me.jpg"
               alt="About-me"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -178,9 +185,10 @@ const DeveloperView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
             target="blank_"
           >
-            <img
-              src="Posts/Git-Hub.jpg"
+            <Image
+              src="/Posts/Git-Hub.jpg"
               alt="Git-Hub Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -193,9 +201,10 @@ const DeveloperView = () => {
             href="/projects"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Projects.jpg"
+            <Image
+              src="/Posts/Projects.jpg"
               alt="Projects Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -206,9 +215,10 @@ const DeveloperView = () => {
             href="/hobbies"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Hobbies.jpg"
+            <Image
+              src="/Posts/Hobbies.jpg"
               alt="Hobbies Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -221,9 +231,10 @@ const DeveloperView = () => {
             href="/professional"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Experience.jpg"
+            <Image
+              src="/Posts/Experience.jpg"
               alt="Experience Post"
+              fill
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">

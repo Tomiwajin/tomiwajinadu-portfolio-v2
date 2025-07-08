@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/select";
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
 
 const categories = ["All", "webDev", "MobileDev", "ML", "JavaDev"];
 
@@ -21,7 +22,7 @@ const projects = [
     title: "TomiwaJinadu Portfolio-V1",
     description:
       "My personal portfolio built with React, Vite, and Tailwind CSS...",
-    image: "projects/project5.png",
+    image: "/projects/project5.png",
     tags: ["React", "Vite", "Tailwind CSS"],
     demoUrl: "https://tomiwa-jinadu-portfolio-v1.vercel.app",
     githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
@@ -31,7 +32,7 @@ const projects = [
     id: 2,
     title: "Task Manager Desktop App",
     description: "A JavaFX-based task management desktop application...",
-    image: "projects/project3.png",
+    image: "/projects/project3.png",
     tags: ["Java", "JavaFX", "Maven"],
     demoUrl: "https://task-manager-nr9n.onrender.com",
     githubUrl: "https://github.com/Tomiwajin/Task-Manager.git",
@@ -41,7 +42,7 @@ const projects = [
     id: 3,
     title: "Multithreaded File Transfer System",
     description: "A Rust-based client-server file transfer system...",
-    image: "projects/project1.png",
+    image: "/projects/project1.png",
     tags: ["Rust", "TCP", "Multithreading"],
     demoUrl: "https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git",
     githubUrl:
@@ -52,7 +53,7 @@ const projects = [
     id: 4,
     title: "House Price Prediction ML App",
     description: "Built a regression model using Scikit-learn to predict...",
-    image: "projects/project2.png",
+    image: "/projects/project2.png",
     tags: ["Python", "Machine Learning", "Render"],
     demoUrl: "https://house-price-prediction-gzd4.onrender.com",
     githubUrl: "https://github.com/Tomiwajin/House-price-prediction",
@@ -62,7 +63,7 @@ const projects = [
     id: 5,
     title: "Carpool Web App",
     description: "A responsive ride-sharing website...",
-    image: "projects/project4.png",
+    image: "/projects/project4.png",
     tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://tomiwajin.github.io/OluwatomiwaJinadu_Project/",
     githubUrl: "https://github.com/Tomiwajin/OluwatomiwaJinadu_Project.git",
@@ -153,7 +154,7 @@ const Page = () => {
                   {project.description}
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
-                  <img
+                  <Image
                     src={project.image}
                     height="1000"
                     width="1000"

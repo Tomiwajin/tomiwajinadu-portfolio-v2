@@ -3,6 +3,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Grid, Volume2 } from "lucide-react";
 import { PinContainer } from "@/components/ui/3d-pin";
 import Link from "next/link";
+import Image from "next/image";
 
 const RecruiterView = () => {
   const words = ["Efficiency", "usability", "scalability"];
@@ -11,9 +12,11 @@ const RecruiterView = () => {
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
-          <img
-            src="Profile-pic/placeholder.JPG"
+          <Image
+            src="/Profile-pic/placeholder.JPG"
             alt="Projects Post"
+            width={256}
+            height={384}
             className="rounded-full w-20 h-20 md:w-40 md:h-40"
           />
         </div>
@@ -86,9 +89,10 @@ const RecruiterView = () => {
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 {" "}
-                <img
+                <Image
                   src="/Posts/about-me.jpg"
                   alt="About me Post"
+                  fill
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -100,9 +104,10 @@ const RecruiterView = () => {
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Experience.jpg"
+                <Image
+                  src="/Posts/Experience.jpg"
                   alt="Experience Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -116,9 +121,10 @@ const RecruiterView = () => {
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/projects" href="/projects">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Projects.jpg"
+                <Image
+                  src="/Posts/Projects.jpg"
                   alt="Projects Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -132,9 +138,10 @@ const RecruiterView = () => {
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/Interests" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Hobbies.jpg"
+                <Image
+                  src="/Posts/Hobbies.jpg"
                   alt="Hobbies Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -148,9 +155,10 @@ const RecruiterView = () => {
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/work auth" href="/work-auth">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Work-Authorization.jpg"
+                <Image
+                  src="/Posts/Work-Authorization.jpg"
                   alt="Work-Auth Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -164,9 +172,10 @@ const RecruiterView = () => {
           <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
-                <img
-                  src="Posts/Git-Hub.jpg"
+                <Image
+                  src="/Posts/Git-Hub.jpg"
                   alt="Git-Hub Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -186,9 +195,10 @@ const RecruiterView = () => {
             href="/about-me"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
+            <Image
               src="/Posts/about-me.jpg"
               alt="About me Post"
+              fill
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -199,9 +209,10 @@ const RecruiterView = () => {
             href="/professional"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Experience.jpg"
+            <Image
+              src="/Posts/Experience.jpg"
               alt="Experience Post"
+              fill
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -214,9 +225,10 @@ const RecruiterView = () => {
             href="/projects"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Projects.jpg"
+            <Image
+              src="/Posts/Projects.jpg"
               alt="Projects Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -227,9 +239,10 @@ const RecruiterView = () => {
             href="/hobbies"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Hobbies.jpg"
+            <Image
+              src="/Posts/Hobbies.jpg"
               alt="Hobbies Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -242,9 +255,10 @@ const RecruiterView = () => {
             href="work-auth"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
-            <img
-              src="Posts/Work-Authorization.jpg"
+            <Image
+              src="/Posts/Work-Authorization.jpg"
               alt="Work-Auth Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -258,9 +272,10 @@ const RecruiterView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
             target="blank_"
           >
-            <img
-              src="Posts/Git-Hub.jpg"
+            <Image
+              src="/Posts/Git-Hub.jpg"
               alt="Git-Hub Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">

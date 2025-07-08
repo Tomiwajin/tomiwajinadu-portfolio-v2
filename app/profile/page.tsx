@@ -5,7 +5,7 @@ import RecruiterView from "./RecruiterView";
 import DeveloperView from "./DeveloperView";
 import StalkerView from "./StalkerView";
 
-const page = () => {
+const Page = () => {
   const { viewer } = useViewer();
   return (
     <div className="pt-20 px-4 md:pt-10">
@@ -16,4 +16,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

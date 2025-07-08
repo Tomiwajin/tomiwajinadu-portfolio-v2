@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useViewer } from "@/components/Context/ViewerProvider";
 import { ThemeToggle } from "@/components/ThemeToggle/Themetoggle";
+import Image from "next/image";
 
 export default function HomePage() {
   const { setViewer } = useViewer();
@@ -24,9 +25,11 @@ export default function HomePage() {
           className="flex items-center justify-between w-full px-20 py-3 rounded-xl border border-theme hover hover:scale-105 active:scale-95 transition"
         >
           <div className="flex items-center gap-3">
-            <img
-              src="Avatars/recruiter.jpeg"
+            <Image
+              src="/Avatars/recruiter.jpeg"
               alt="recuiter avatar"
+              width={40}
+              height={40}
               className="h-10 w-10 rounded-full object-cover"
             />
             <div className="text-left">
@@ -39,9 +42,11 @@ export default function HomePage() {
           className="flex items-center justify-between w-full px-20 py-3 rounded-xl border border-theme hover hover:scale-105 active:scale-95 transition"
         >
           <div className="flex items-center gap-3">
-            <img
-              src="Avatars/developer.jpg"
+            <Image
+              src="/Avatars/developer.jpg"
               alt="recuiter avatar"
+              width={40}
+              height={40}
               className="h-10 w-10 rounded-full object-cover"
             />
             <div className="text-left">
@@ -54,9 +59,11 @@ export default function HomePage() {
           className="flex items-center justify-between w-full px-20 py-3 rounded-xl border border-theme hover hover:scale-105 active:scale-95 transition"
         >
           <div className="flex items-center gap-3">
-            <img
-              src="Avatars/stalker.jpg"
+            <Image
+              src="/Avatars/stalker.jpg"
               alt="recuiter avatar"
+              width={40}
+              height={40}
               className="h-10 w-10 rounded-full object-cover"
             />
             <div className="text-left">
