@@ -15,12 +15,12 @@ import {
 import { ThemeToggle } from "../ThemeToggle/Themetoggle";
 
 const navItems = [
-  { name: "Home", href: "/", icon: Home },
+  { name: "Home", href: "/home", icon: Home },
   { name: "Professional", href: "/professional", icon: Briefcase },
   { name: "Projects", href: "/projects", icon: Folder },
   { name: "Contact", href: "/contact", icon: MessageSquare },
   { name: "Skills", href: "/skills", icon: Lightbulb },
-  { name: "Profile", href: "/profile", icon: User },
+  { name: "Profile", href: "/", icon: User },
 ];
 
 const Sidebar = () => {

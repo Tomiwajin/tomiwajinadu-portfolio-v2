@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/profile/RecruiterView.tsx"
+    "app/home/RecruiterView.tsx"
   ],
   "exclude": ["node_modules"]
 }

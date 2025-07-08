@@ -11,7 +11,7 @@ export default function HomePage() {
 
   const handleSelect = (viewer: "recruiter" | "developer" | "stalker") => {
     setViewer(viewer);
-    router.push("/profile");
+    router.push("/home");
   };
 
   return (

@@ -13,7 +13,7 @@ const StalkerView = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
           <Image
-            src="Profile-pic/stalker.gif"
+            src="/Profile-pic/stalker.gif"
             alt="Projects Post"
             width={256}
             height={384}
@@ -92,6 +92,7 @@ const StalkerView = () => {
                 <Image
                   src="/Posts/about-me.jpg"
                   alt="About-me"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -104,8 +105,9 @@ const StalkerView = () => {
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
-                  src="Posts/Git-Hub.jpg"
+                  src="/Posts/Git-Hub.jpg"
                   alt="Git-Hub Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -120,8 +122,9 @@ const StalkerView = () => {
             <PinContainer title="/projects" href="/projects">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
-                  src="Posts/Projects.jpg"
+                  src="/Posts/Projects.jpg"
                   alt="Projects Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -136,8 +139,9 @@ const StalkerView = () => {
             <PinContainer title="/hobbies" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
-                  src="Posts/Hobbies.jpg"
+                  src="/Posts/Hobbies.jpg"
                   alt="Hobbies Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -150,8 +154,9 @@ const StalkerView = () => {
             <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
-                  src="Posts/Experience.jpg"
+                  src="/Posts/Experience.jpg"
                   alt="Experience Post"
+                  fill
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -174,6 +179,7 @@ const StalkerView = () => {
             <Image
               src="/Posts/about-me.jpg"
               alt="About-me"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -186,8 +192,9 @@ const StalkerView = () => {
             target="blank_"
           >
             <Image
-              src="Posts/Git-Hub.jpg"
+              src="/Posts/Git-Hub.jpg"
               alt="Git-Hub Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -201,8 +208,9 @@ const StalkerView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <Image
-              src="Posts/Projects.jpg"
+              src="/Posts/Projects.jpg"
               alt="Projects Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -214,8 +222,9 @@ const StalkerView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <Image
-              src="Posts/Hobbies.jpg"
+              src="/Posts/Hobbies.jpg"
               alt="Hobbies Post"
+              fill
               className="h-full w-full"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -229,8 +238,9 @@ const StalkerView = () => {
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <Image
-              src="Posts/Experience.jpg"
+              src="/Posts/Experience.jpg"
               alt="Experience Post"
+              fill
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
