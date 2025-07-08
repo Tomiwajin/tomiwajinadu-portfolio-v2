@@ -99,7 +99,7 @@ const Sidebar = () => {
       {/* MOBILE NAV OVERLAY */}
       <div
         className={cn(
-          "fixed top-0 left-0 h-full w-62 nav-theme backdrop-blur-lg z-50 flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed top-0 left-0 h-full w-62 bg-black/70 text-white backdrop-blur-lg z-50 flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-in-out md:hidden",
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
