@@ -99,7 +99,7 @@ const DeveloperView = () => {
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
-                  src="/Posts/Git-Hub.jpg"
+                  src="/Posts/Git-hub.jpg"
                   alt="Git-Hub Post"
                   fill
                   className="h-full w-full"
@@ -186,7 +186,7 @@ const DeveloperView = () => {
             target="blank_"
           >
             <Image
-              src="/Posts/Git-Hub.jpg"
+              src="/Posts/Git-hub.jpg"
               alt="Git-Hub Post"
               fill
               className="h-full w-full"
