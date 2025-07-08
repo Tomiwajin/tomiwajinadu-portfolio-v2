@@ -7,7 +7,7 @@ const Page = () => {
       <h1 className="text-2xl md:text-4xl font-bold">About Me</h1>
       <div className="flex flex-col max-w-2xl text-lg leading-relaxed text-gray-800 dark:text-gray-200">
         <p>
-          I'm a developer who thrives at the intersection of design and
+          I&#39;m a developer who thrives at the intersection of design and
           engineering — crafting accessible, pixel-perfect user interfaces that
           are as thoughtful as they are performant. I enjoy building experiences
           that feel intuitive, look clean, and are engineered with precision.
@@ -25,7 +25,7 @@ const Page = () => {
           cybersecurity.
         </div>
         <p className="mt-4">
-          Along the way, I’ve collaborated on team projects, developed
+          Along the way, I&#39;ve collaborated on team projects, developed
           real-world tools, and organized student events that blend technology
           and community. I care deeply about accessibility, clean code, and
           building tools that improve everyday lives.

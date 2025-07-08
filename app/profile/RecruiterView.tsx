@@ -55,7 +55,7 @@ const RecruiterView = () => {
                 Email me
               </span>
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-full group-hover:translate-x-0">
-                Let's talk 💌
+                Let&#39;s talk 💌
               </span>
             </button>
           </div>

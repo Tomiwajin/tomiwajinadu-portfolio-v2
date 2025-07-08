@@ -52,7 +52,7 @@ const DeveloperView = () => {
                 Email me
               </span>
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-full group-hover:translate-x-0">
-                Let's collab 💌
+                Let&#39;s collab 💌
               </span>
             </button>
           </div>

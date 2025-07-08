@@ -5,7 +5,7 @@ import { LuPhoneOutgoing } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { LiaLinkedin } from "react-icons/lia";
-import { Coffee, CoffeeIcon } from "lucide-react";
+import { Coffee } from "lucide-react";
 
 const medium = [
   {
@@ -38,7 +38,7 @@ const ContactPage = () => {
         <HoverEffect items={medium} />
       </div>
       <div className="flex flex-wrap md:text-xl justify-center items-center">
-        I'm always up for a chat or coffee
+        I&#39;m always up for a chat or coffee
         <Coffee className="text-purple-500 hover:scale-110" />! Feel free to
         reach out.
       </div>
