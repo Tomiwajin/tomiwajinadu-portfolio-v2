@@ -31,7 +31,7 @@ const Sidebar = () => {
     <>
       {/* DESKTOP SIDEBAR */}
       <aside className="fixed hidden md:flex h-screen w-62 flex-col border-r z-40 px-5 pt-10 border-theme">
-        <Link href="/" className="text-3xl font-cookie font-bold mb-10 pl-3">
+        <Link href="/" className="text-2xl font-cookie font-bold mb-10 pl-3">
           {" "}
           Tomiwa Jinadu
         </Link>

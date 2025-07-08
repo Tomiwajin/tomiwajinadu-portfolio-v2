@@ -1,6 +1,4 @@
 import React from "react";
-import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { LiaChessKingSolid } from "react-icons/lia";
 
 const page = () => {
   return (
