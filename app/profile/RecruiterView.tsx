@@ -130,7 +130,7 @@ const RecruiterView = () => {
         </div>
         <div className="hidden md:flex flex-row gap-8">
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
-            <PinContainer title="/hobbies" href="/hobbies">
+            <PinContainer title="/Interests" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <img
                   src="Posts/Hobbies.jpg"
@@ -138,7 +138,9 @@ const RecruiterView = () => {
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <h2 className="text-white text-xl font-semibold">Hobbies</h2>
+                  <h2 className="text-white text-xl font-semibold">
+                    Interests
+                  </h2>
                 </div>
               </div>
             </PinContainer>
