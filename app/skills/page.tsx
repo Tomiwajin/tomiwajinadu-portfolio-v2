@@ -22,7 +22,6 @@ import {
   DiDatabase,
   DiAws,
   DiDocker,
-  DiTerminal,
 } from "react-icons/di";
 import {
   SiTailwindcss,
@@ -40,9 +39,15 @@ import {
   SiPostgresql,
   SiScikitlearn,
   SiTensorflow,
-  SiCplusplus,
-  SiSocketdotio,
   SiGithubactions,
+  SiTypescript,
+  SiNextdotjs,
+  SiFramer,
+  SiReact,
+  SiSpringboot,
+  SiHeroku,
+  SiNetlify,
+  SiVercel,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -63,6 +68,13 @@ const skills = [
     category: "frontend",
   },
   {
+    icon: SiTypescript,
+    title: "TypeScript",
+    description: "High-level language for interactive web development.",
+    link: "https://www.typescriptlang.org",
+    category: "frontend",
+  },
+  {
     icon: DiReact,
     title: "React",
     description: "A JavaScript library for building user interfaces.",
@@ -70,10 +82,32 @@ const skills = [
     category: "frontend",
   },
   {
+    icon: SiReact,
+    title: "React Native",
+    description: "React for native mobile app development.",
+    link: "https://reactnative.dev",
+    category: "frontend",
+  },
+  {
     icon: SiTailwindcss,
     title: "Tailwind CSS",
     description: "Utility-first CSS framework for styling web interfaces.",
     link: "https://tailwindcss.com",
+    category: "frontend",
+  },
+  {
+    icon: SiNextdotjs,
+    title: "Next.js",
+    description:
+      "React framework for server-side rendering and static websites.",
+    link: "https://nextjs.org",
+    category: "frontend",
+  },
+  {
+    icon: SiFramer,
+    title: "Framer Motion",
+    description: "Animation library for React.",
+    link: "https://www.framer.com/motion/",
     category: "frontend",
   },
   {
@@ -90,6 +124,14 @@ const skills = [
     title: "Node.js",
     description: "JavaScript runtime for building server-side applications.",
     link: "https://nodejs.org",
+    category: "backend",
+  },
+  {
+    icon: SiSpringboot,
+    title: "Spring Boot",
+    description:
+      "Java framework for creating stand-alone, production-grade applications.",
+    link: "https://spring.io/projects/spring-boot",
     category: "backend",
   },
   {
@@ -183,6 +225,27 @@ const skills = [
     title: "Vite",
     description: "Next-generation frontend tooling.",
     link: "https://vitejs.dev",
+    category: "frontend",
+  },
+  {
+    icon: SiHeroku,
+    title: "Heroku",
+    description: "Platform as a Service (PaaS) for deploying web apps.",
+    link: "https://heroku.com",
+    category: "tools",
+  },
+  {
+    icon: SiNetlify,
+    title: "Netlify",
+    description: "Platform for deploying static sites and apps.",
+    link: "https://netlify.com",
+    category: "tools",
+  },
+  {
+    icon: SiVercel,
+    title: "Vercel",
+    description: "Hosting and deployment platform for Next.js apps.",
+    link: "https://vercel.com",
     category: "tools",
   },
 
@@ -216,30 +279,7 @@ const skills = [
     category: "cloud",
   },
 
-  // Systems
-  {
-    icon: DiTerminal,
-    title: "Bash",
-    description: "Shell used for command-line and scripting tasks.",
-    link: "https://gnu.org/software/bash",
-    category: "systems",
-  },
-  {
-    icon: SiCplusplus,
-    title: "C++",
-    description: "Powerful low-level programming language.",
-    link: "https://isocpp.org",
-    category: "systems",
-  },
-  {
-    icon: SiSocketdotio,
-    title: "Socket Programming",
-    description: "Network communication between processes.",
-    link: "https://en.wikipedia.org/wiki/Network_socket",
-    category: "systems",
-  },
-
-  // Data / ML
+  // Database
   {
     icon: DiDatabase,
     title: "SQL",
@@ -281,7 +321,7 @@ const categories = [
   { label: "All", value: "all" },
   { label: "FrontEnd", value: "frontend" },
   { label: "BackEnd", value: "backend" },
-  { label: "Database", value: "database" },
+  { label: "Database", value: "data" },
   { label: "Cloud", value: "cloud" },
   { label: "Tools", value: "tools" },
 ];

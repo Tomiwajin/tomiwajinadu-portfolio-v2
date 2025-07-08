@@ -108,13 +108,13 @@ const page = () => {
       title: "2021",
       content: (
         <div>
-          <p className="mb-4 text-sm font-normal">
+          <div className="mb-4 text-sm font-normal">
             🎓 Started college at the{" "}
             <LinkPreview url="https://www.westga.edu" className="font-bold">
               {" "}
               University of West Georgia.
             </LinkPreview>
-          </p>
+          </div>
           <p className="mb-4 text-sm font-normal">
             💻 Began building personal projects in Java and Python — laying the
             foundation in OOP and scripting.
