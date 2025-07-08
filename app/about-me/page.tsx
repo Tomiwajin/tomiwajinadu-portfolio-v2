@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <section className="flex flex-col items-center justify-center mt-12 gap-6 px-4">
       <h1 className="text-2xl md:text-4xl font-bold">About Me</h1>
-      <div className="flex flex-col max-w-2xl text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+      <div className="flex flex-col max-w-2xl text-lg leading-relaxed">
         <p>
           I&#39;m a developer who thrives at the intersection of design and
           engineering — crafting accessible, pixel-perfect user interfaces that
