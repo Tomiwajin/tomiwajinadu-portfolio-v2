@@ -37,7 +37,7 @@ const RecruiterView = () => {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <button
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              onClick={() => window.open("/OluwatomiwaJinaduSWE.pdf", "_blank")}
               className="group relative overflow-hidden rounded-md border-indigo-500 bg-indigo-500 font-semibold shadow-md w-[120px] h-[40px]"
             >
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-0 group-hover:-translate-x-full">
