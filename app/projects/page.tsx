@@ -88,7 +88,7 @@ const Page = () => {
   });
 
   return (
-    <div className="md:pl-70 flex flex-col  py-12 md:py-0">
+    <div className="md:pl-70 flex flex-col  py-12 md:py-0 animate-fade-in">
       <div className="flex flex-wrap items-center gap-4">
         <div className="hidden md:flex flex-wrap gap-4">
           {categories.map((category) => (

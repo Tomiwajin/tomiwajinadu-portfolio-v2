@@ -10,7 +10,7 @@ const DeveloperView = () => {
 
   return (
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 animate-fade-in">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
           <div className="bg-background rounded-full w-24 h-24 md:w-44 md:h-44 flex items-center justify-center">
             <div className="bg-background rounded-full w-20 h-20 md:w-40 md:h-40" />
@@ -62,6 +62,9 @@ const DeveloperView = () => {
             <div className="text-xl font-extrabold text-gray-500">
               Software Developer
             </div>
+            <div className="text-xl font-bold text-indigo-500">
+              📍Atlanta,Georgia
+            </div>
             <div className="text-20 font-normal">
               I build responsive products <br />
               with a strong focus on
@@ -73,7 +76,7 @@ const DeveloperView = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center -mt-10 md:mt-0 md:-ml-30">
+      <div className="flex justify-center -mt-10 md:mt-0 md:-ml-50">
         <Grid />
       </div>
 

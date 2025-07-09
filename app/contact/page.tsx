@@ -33,11 +33,11 @@ const medium = [
 
 const ContactPage = () => {
   return (
-    <div className="md:flex flex-col">
+    <div className="md:flex flex-col animate-fade-in">
       <div className="pl-6 md:pl-90 flex flex-wrap mt-10 justify-between">
         <HoverEffect items={medium} />
       </div>
-      <div className="flex flex-wrap md:text-xl justify-center items-center">
+      <div className="flex flex-wrap md:text-xl md:pl-50 justify-center items-center">
         I&#39;m always up for a chat or coffee
         <Coffee className="text-purple-500 hover:scale-110" />! Feel free to
         reach out.

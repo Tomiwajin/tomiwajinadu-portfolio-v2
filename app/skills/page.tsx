@@ -343,7 +343,7 @@ const Page = () => {
   });
 
   return (
-    <div className="md:pl-70 flex flex-col gap-20 py-12 md:py-0">
+    <div className="md:pl-70 flex flex-col gap-20 py-12 md:py-0 animate-fade-in">
       <div className="flex flex-col">
         <div className="flex flex-row flex-wrap gap-4 items-center">
           {categories.map((cat) => (

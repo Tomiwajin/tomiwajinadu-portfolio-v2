@@ -125,7 +125,7 @@ const page = () => {
   ];
 
   return (
-    <div className=" px-4 md:px-70 relative w-full overflow-clip">
+    <div className=" px-4 md:px-70 relative w-full overflow-clip animate-fade-in">
       <Timeline data={data} />
     </div>
   );

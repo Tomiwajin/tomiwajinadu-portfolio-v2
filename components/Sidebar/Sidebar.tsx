@@ -16,7 +16,7 @@ import { ThemeToggle } from "../ThemeToggle/Themetoggle";
 
 const navItems = [
   { name: "Home", href: "/home", icon: Home },
-  { name: "Professional", href: "/professional", icon: Briefcase },
+  { name: "Experience", href: "/experience", icon: Briefcase },
   { name: "Projects", href: "/projects", icon: Folder },
   { name: "Contact", href: "/contact", icon: MessageSquare },
   { name: "Skills", href: "/skills", icon: Lightbulb },

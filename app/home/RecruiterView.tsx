@@ -10,7 +10,7 @@ const RecruiterView = () => {
 
   return (
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 animate-fade-in">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
           <Image
             src="/Profile-pic/placeholder.JPG"
@@ -67,6 +67,9 @@ const RecruiterView = () => {
             <div className="text-xl font-extrabold text-gray-500">
               Software Developer
             </div>
+            <div className="text-xl font-bold text-indigo-500">
+              📍Atlanta,Georgia
+            </div>
             <div className="text-20 font-normal">
               I build responsive products <br />
               with a strong focus on
@@ -78,14 +81,14 @@ const RecruiterView = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center -mt-10 md:mt-0 md:-ml-30">
+      <div className="flex justify-center -mt-10 md:mt-0 md:-ml-50">
         <Grid />
       </div>
 
       {/* DeskTop View*/}
       <div className="hidden md:flex flex-col gap-26">
         <div className="hidden md:flex flex-row gap-8">
-          <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
+          <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0 animate-fade-in-delay-1">
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 {" "}
@@ -101,7 +104,7 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
+          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0 animate-fade-in-delay-2">
             <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
@@ -118,7 +121,7 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
+          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0 animate-fade-in-delay-3">
             <PinContainer title="/projects" href="/projects">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
@@ -134,7 +137,7 @@ const RecruiterView = () => {
             </PinContainer>
           </div>
         </div>
-        <div className="hidden md:flex flex-row gap-8">
+        <div className="hidden md:flex flex-row gap-8 animate-fade-in-delay-4">
           <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
             <PinContainer title="/Interests" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">

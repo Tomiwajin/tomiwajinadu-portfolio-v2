@@ -10,7 +10,7 @@ const StalkerView = () => {
 
   return (
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 animate-fade-in">
         <div className="bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 p-[3px] rounded-full">
           <Image
             src="/Profile-pic/stalker.gif"
@@ -66,6 +66,9 @@ const StalkerView = () => {
             <div className="text-xl font-extrabold text-gray-500">
               Software Developer
             </div>
+            <div className="text-xl font-bold text-indigo-500">
+              📍Area 51, Earth
+            </div>
             <div className="text-20 font-normal">
               I build responsive products…
               <br />
@@ -79,7 +82,7 @@ const StalkerView = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center -mt-10 md:mt-0 md:-ml-30">
+      <div className="flex justify-center -mt-10 md:mt-0 md:-ml-50">
         <Grid />
       </div>
 
