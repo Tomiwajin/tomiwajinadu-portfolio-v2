@@ -26,7 +26,7 @@ const StalkerView = () => {
             <div
               title="Pronounciation"
               onClick={() => {
-                const audio = new Audio("Audio/rickroll.mp3");
+                const audio = new Audio("Audio/rick_roll.mp4");
                 audio.play();
               }}
               className="hover:scale-105 active:scale-95"
