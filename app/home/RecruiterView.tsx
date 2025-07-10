@@ -88,14 +88,15 @@ const RecruiterView = () => {
       {/* DeskTop View*/}
       <div className="hidden md:flex flex-col gap-26">
         <div className="hidden md:flex flex-row gap-8">
-          <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0 animate-fade-in-delay-1">
+          <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-1">
             <PinContainer title="/About Me" href="/about-me">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 {" "}
                 <Image
                   src="/Posts/about-me.jpg"
                   alt="About me Post"
-                  fill
+                  width={256}
+                  height={384}
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -104,13 +105,14 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0 animate-fade-in-delay-2">
+          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-2">
             <PinContainer title="/Experience" href="/professional">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
                   src="/Posts/Experience.jpg"
                   alt="Experience Post"
-                  fill
+                  width={256}
+                  height={384}
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -121,13 +123,14 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0 animate-fade-in-delay-3">
+          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-3">
             <PinContainer title="/projects" href="/projects">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
                   src="/Posts/Projects.jpg"
                   alt="Projects Post"
-                  fill
+                  width={256}
+                  height={384}
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -137,14 +140,15 @@ const RecruiterView = () => {
             </PinContainer>
           </div>
         </div>
-        <div className="hidden md:flex flex-row gap-8 animate-fade-in-delay-4">
-          <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0">
+        <div className="hidden md:flex flex-row gap-8 ">
+          <div className="flex -ml-40 -mt-40  md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-1">
             <PinContainer title="/Interests" href="/hobbies">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
                   src="/Posts/Hobbies.jpg"
                   alt="Hobbies Post"
-                  fill
+                  width={256}
+                  height={384}
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -155,13 +159,14 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0">
+          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-2">
             <PinContainer title="/work auth" href="/work-auth">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
                   src="/Posts/Work-Authorization.jpg"
                   alt="Work-Auth Post"
-                  fill
+                  width={256}
+                  height={384}
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -172,13 +177,14 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0">
+          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-3">
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
                   src="/Posts/Git-hub.jpg"
                   alt="Git-Hub Post"
-                  fill
+                  width={256}
+                  height={384}
                   className="h-full w-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
