@@ -30,6 +30,7 @@ export const ThemeToggle = () => {
 
   return (
     <button
+      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
       onClick={toggleTheme}
       className={cn(
         "z-50 p-2 rounded-full transition-colors duration-300",
