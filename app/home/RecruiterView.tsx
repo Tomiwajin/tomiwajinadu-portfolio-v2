@@ -106,7 +106,7 @@ const RecruiterView = () => {
             </PinContainer>
           </div>
           <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-2">
-            <PinContainer title="/Experience" href="/professional">
+            <PinContainer title="/Experience" href="/experience">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
                   src="/Posts/Experience.jpg"
@@ -215,7 +215,7 @@ const RecruiterView = () => {
             </div>
           </Link>
           <Link
-            href="/professional"
+            href="/experience"
             className="w-1/2 h-60 border relative overflow-hidden active:scale-105"
           >
             <Image
