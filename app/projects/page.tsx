@@ -19,6 +19,17 @@ const categories = ["All", "webDev", "MobileDev", "ML", "JavaDev"];
 const projects = [
   {
     id: 1,
+    title: "Job Application Tracker",
+    description:
+      "An intelligent job application tracker that integrates with Gmail to automatically parse job-related emails, extract key details, visualize analytics, and export data — built with Next.js, TypeScript, Tailwind, and Google APIs.",
+    image: "/projects/project5.png",
+    tags: ["React", "Next.js", "Tailwind CSS", "Google API"],
+    demoUrl: "https://tomiwa-jinadu-portfolio-v1.vercel.app",
+    githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
+    category: "webDev",
+  },
+  {
+    id: 2,
     title: "TomiwaJinadu Portfolio-V1",
     description:
       "My personal portfolio built with React, Vite, and Tailwind CSS...",
@@ -29,7 +40,7 @@ const projects = [
     category: "webDev",
   },
   {
-    id: 2,
+    id: 3,
     title: "Task Manager Desktop App",
     description: "A JavaFX-based task management desktop application...",
     image: "/projects/project3.png",
@@ -39,7 +50,7 @@ const projects = [
     category: "JavaDev",
   },
   {
-    id: 3,
+    id: 4,
     title: "Multithreaded File Transfer System",
     description: "A Rust-based client-server file transfer system...",
     image: "/projects/project1.png",
@@ -50,7 +61,7 @@ const projects = [
     category: "JavaDev",
   },
   {
-    id: 4,
+    id: 5,
     title: "House Price Prediction ML App",
     description: "Built a regression model using Scikit-learn to predict...",
     image: "/projects/project2.png",
@@ -60,7 +71,7 @@ const projects = [
     category: "ML",
   },
   {
-    id: 5,
+    id: 6,
     title: "Carpool Web App",
     description: "A responsive ride-sharing website...",
     image: "/projects/project4.png",
