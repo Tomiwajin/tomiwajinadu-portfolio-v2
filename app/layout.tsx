@@ -6,6 +6,7 @@ import Visibility from "@/components/Sidebar/Visibilty";
 import PageSwitchLoader from "@/components/Loaders/PageSwitchLoader";
 import { ViewerProvider } from "@/components/Context/ViewerProvider";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
           <PageSwitchLoader />
           <Visibility>{children}</Visibility>
           <Analytics />
+          <SpeedInsights />
         </ViewerProvider>
       </body>
     </html>
