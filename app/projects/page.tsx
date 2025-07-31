@@ -22,7 +22,7 @@ const projects = [
     title: "Job Application Tracker",
     description:
       "An intelligent job application tracker that integrates with Gmail to automatically parse job-related emails, extract key details, visualize analytics, and export data — built with Next.js, TypeScript, Tailwind, and Google APIs.",
-    image: "/projects/project5.png",
+    image: "/projects/project6.png",
     tags: ["React", "Next.js", "Tailwind CSS", "Google API"],
     demoUrl: "https://tomiwa-jinadu-portfolio-v1.vercel.app",
     githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
