@@ -19,9 +19,9 @@ const categories = ["All", "webDev", "MobileDev", "ML", "JavaDev"];
 const projects = [
   {
     id: 1,
-    title: "Job Application Tracker",
+    title: "CareerSync",
     description:
-      "An intelligent job application tracker that integrates with Gmail to automatically parse job-related emails, extract key details, visualize analytics, and export data — built with Next.js, TypeScript, Tailwind, and Google APIs.",
+      "An AI job application tracker built with Next.js, TypeScript,Google API and huggingface...",
     image: "/projects/project6.png",
     tags: ["React", "Next.js", "Tailwind CSS", "Google API"],
     demoUrl: "https://job-app-tracker-gmail.vercel.app/",
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Multithreaded File Transfer System",
+    title: "Multithreaded FTS",
     description: "A Rust-based client-server file transfer system...",
     image: "/projects/project1.png",
     tags: ["Rust", "TCP", "Multithreading"],

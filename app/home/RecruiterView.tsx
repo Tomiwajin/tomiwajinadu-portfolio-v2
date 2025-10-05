@@ -17,7 +17,7 @@ const RecruiterView = () => {
             alt="Projects Post"
             width={256}
             height={384}
-            className="rounded-full w-20 h-20 md:w-40 md:h-40"
+            className="rounded-full w-20 h-20 md:w-40 md:h-40 object-cover"
           />
         </div>
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:px-10">
