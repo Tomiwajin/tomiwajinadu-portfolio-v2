@@ -13,15 +13,38 @@ const page = () => {
             <LinkPreview url="https://www.westga.edu" className="font-bold">
               {" "}
               University of West Georgia.
+            </LinkPreview>{" "}
+          </div>
+          <p className="mb-4 text-sm font-normal">
+            👨🏽‍💻{" "}
+            <span className="font-semibold">
+              Software Engineering Intern at Bemelo Health
+            </span>{" "}
+            – Developed a cross-platform mental health app MVP using Flutter,
+            Firebase, WebRTC, and OpenAI API. Built CI/CD pipeline with GitHub
+            Actions, reducing release cycle time by 60%. Implemented
+            HIPAA-compliant security measures including end-to-end encryption
+            (TLS 1.3), OAuth 2.0, and multi-factor authentication.
+          </p>
+          <div className="mb-4 text-sm font-normal">
+            🤖 <span className="font-semibold">Launched CareerSync</span> –
+            Open-source AI-powered job tracker that auto-parses emails. Deployed
+            custom fine-tuned SetFit classifier and T5 extractor models on
+            Hugging Face achieving 95% accuracy. Handles 6,000+ emails per user
+            at 2s average latency with analytics dashboard.
+            <LinkPreview
+              url="http://careersync.cloud"
+              className="font-bold ml-1"
+            >
+              careersync.cloud
             </LinkPreview>
           </div>
           <p className="mb-4 text-sm font-normal">
-            👨🏽‍💻 Software Engineering Intern at Bemelo Health – contributed to
-            mobile development and AI feature prototyping.
-          </p>
-          <p className="mb-4 text-sm font-normal">
-            🏆 Built a Tournament Bracket Application in Java with dynamic match
-            progression.
+            ☁️ Earned{" "}
+            <span className="font-semibold">
+              Oracle Cloud Infrastructure (OCI) Certified Foundations Associate
+            </span>{" "}
+            certification.
           </p>
           <div className="mb-4 text-sm font-normal">
             🚗 Developed a{" "}
@@ -31,17 +54,7 @@ const page = () => {
             >
               Carpool Website
             </LinkPreview>{" "}
-            to connect local drivers and riders.
-          </div>
-          <div className="mb-4 text-sm font-normal">
-            ✅ Created a full-stack{" "}
-            <LinkPreview
-              url="https://task-manager-nr9n.onrender.com"
-              className="font-bold"
-            >
-              Task Manager
-            </LinkPreview>{" "}
-            web app with downloadable `.exe` installer.
+            using modern web technologies to connect local drivers and riders.
           </div>
         </div>
       ),
@@ -50,17 +63,46 @@ const page = () => {
       title: "2024",
       content: (
         <div>
+          <div className="mb-4 text-sm font-normal">
+            🦀{" "}
+            <span className="font-semibold">
+              Led Distributed Sales Analytics System
+            </span>{" "}
+            – Managed team of 3 to build multi-threaded Rust application
+            handling 40 branches concurrently with thread-safe data aggregation
+            using Arc/Mutex primitives. Built TCP communication pipeline with
+            Base64 encoding for secure data transmission.
+            <LinkPreview
+              url="https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git"
+              className="font-bold ml-1"
+            >
+              View Project
+            </LinkPreview>
+          </div>
+          <div className="mb-4 text-sm font-normal">
+            📱 Built cross-platform Flutter app for elderly meal requests with
+            Firebase Auth and REST API integration.
+            <LinkPreview
+              url="https://github.com/Tomiwajin/Elderly_Helper_App.git"
+              className="font-bold ml-1"
+            >
+              View Project
+            </LinkPreview>
+          </div>
           <p className="mb-4 text-sm font-normal">
-            🦀 Developed a Rust-based client-server system using TCP sockets for
-            Base64 sales data transfer.
+            🌍{" "}
+            <span className="font-semibold">
+              Vice President & Event Coordinator
+            </span>{" "}
+            of the African Students Union at UWG – Led Afro Week and Met
+            Gala-themed cultural events.
           </p>
           <p className="mb-4 text-sm font-normal">
-            📱 Built a cross-platform Flutter app to help elderly users request
-            meals. Integrated Firebase Auth and REST APIs.
-          </p>
-          <p className="mb-4 text-sm font-normal">
-            🌍 Vice President of the African Students Union at UWG, led Afro
-            Week and Met Gala-themed events.
+            ☁️ Earned{" "}
+            <span className="font-semibold">
+              AWS Certified Cloud Practitioner
+            </span>{" "}
+            certification.
           </p>
         </div>
       ),
@@ -70,21 +112,37 @@ const page = () => {
       content: (
         <div>
           <p className="mb-4 text-sm font-normal">
-            📊 Built a regression model using Scikit-learn to predict California
-            housing prices. Visualized data with Matplotlib and deployed via
-            Render.
+            🎓 Achieved{" "}
+            <span className="font-semibold">Dean's List honors</span> for
+            academic excellence.
+          </p>
+          <div className="mb-4 text-sm font-normal">
+            🏠{" "}
+            <span className="font-semibold">
+              California Housing Price Predictor
+            </span>{" "}
+            📊 Developed regression model using Scikit-learn to predict
+            California housing prices. Created responsive web interface for
+            model deployment and data visualization with Matplotlib.
+            <LinkPreview
+              url="https://github.com/Tomiwajin/House-price-prediction.git"
+              className="font-bold ml-1"
+            >
+              View Project
+            </LinkPreview>
+          </div>
+          <p className="mb-4 text-sm font-normal">
+            🎮 Built "Text Twister" desktop game in C# with scoring mechanics,
+            timer logic, and GUI implementation using Windows Forms.
           </p>
           <p className="mb-4 text-sm font-normal">
-            🌐 Created a responsive webpage for the housing model to display
-            results.
+            🔥 Deep-dived into backend development with Node.js, Express, and
+            Firebase. Expanded machine learning knowledge with Python libraries
+            (pandas, NumPy, scikit-learn).
           </p>
           <p className="mb-4 text-sm font-normal">
-            🎮 Developed a C# desktop game called “Text Twister” with scoring
-            and timer logic.
-          </p>
-          <p className="mb-4 text-sm font-normal">
-            🔥 Learned backend development with Node.js & Firebase and expanded
-            ML knowledge.
+            🗄️ Studied Advanced Database Systems – Mastered database design,
+            query optimization, indexing strategies, and transaction management.
           </p>
         </div>
       ),
@@ -94,12 +152,23 @@ const page = () => {
       content: (
         <div>
           <p className="mb-4 text-sm font-normal">
-            🗄️ Built CRUD-based projects using MongoDB and SQL to strengthen
-            database design and query skills.
+            🗄️ Built multiple CRUD applications using MongoDB and PostgreSQL to
+            master NoSQL and relational database paradigms, schema design, and
+            complex queries.
           </p>
           <p className="mb-4 text-sm font-normal">
-            📚 Continued refining Java and Python fundamentals through personal
-            backend projects.
+            📚 Completed Data Structures and Algorithms coursework – Implemented
+            trees, graphs, sorting algorithms, and dynamic programming solutions
+            in Java.
+          </p>
+          <p className="mb-4 text-sm font-normal">
+            🔧 Studied Systems Programming – Learned memory management,
+            pointers, system calls, and low-level programming in C/C++.
+          </p>
+          <p className="mb-4 text-sm font-normal">
+            💻 Strengthened Java and Python fundamentals through personal
+            projects focusing on OOP design patterns, testing frameworks
+            (JUnit), and clean code principles.
           </p>
         </div>
       ),
@@ -111,13 +180,22 @@ const page = () => {
           <div className="mb-4 text-sm font-normal">
             🎓 Started college at the{" "}
             <LinkPreview url="https://www.westga.edu" className="font-bold">
-              {" "}
-              University of West Georgia.
+              University of West Georgia
             </LinkPreview>
+            , pursuing B.S. in Computing.
           </div>
           <p className="mb-4 text-sm font-normal">
-            💻 Began building personal projects in Java and Python — laying the
-            foundation in OOP and scripting.
+            💻 Built foundational programming skills in Java and Python –
+            Learned object-oriented programming, basic algorithms, and software
+            development fundamentals.
+          </p>
+          <p className="mb-4 text-sm font-normal">
+            🌐 Completed Introduction to Web Development – Built first websites
+            using HTML, CSS, and JavaScript.
+          </p>
+          <p className="mb-4 text-sm font-normal">
+            🚀 Started personal coding projects to apply classroom concepts,
+            experimenting with simple CLI tools and automation scripts.
           </p>
         </div>
       ),
@@ -125,7 +203,7 @@ const page = () => {
   ];
 
   return (
-    <div className=" px-4 md:px-70 relative w-full overflow-clip animate-fade-in">
+    <div className="px-4 md:px-70 relative w-full overflow-clip animate-fade-in">
       <Timeline data={data} />
     </div>
   );
