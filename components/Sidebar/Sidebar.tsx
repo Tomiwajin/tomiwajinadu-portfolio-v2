@@ -2,8 +2,9 @@
 
 import { GithubIcon, Linkedin, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utilis";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Home,
   Briefcase,
@@ -25,14 +26,43 @@ const navItems = [
 
 const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const pathname = usePathname();
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
+
+  const isActive = (href: string) => pathname === href;
 
   return (
     <>
-      {/* DESKTOP SIDEBAR */}
       <aside className="fixed hidden md:flex h-screen w-62 flex-col border-r z-40 px-5 pt-10 border-theme opacity-0 animate-fade-in-left">
-        <Link href="/" className="text-2xl font-cookie font-bold mb-10 pl-3">
-          {" "}
+        <Link
+          href="/"
+          className="text-2xl font-cookie font-bold mb-10 pl-3 hover:opacity-80 transition-opacity"
+        >
           Tomiwa Jinadu
         </Link>
 
@@ -41,10 +71,9 @@ const Sidebar = () => {
             <Link
               key={name}
               href={href}
-              onClick={() => setSelectedCategory(name)}
               className={cn(
                 "flex items-center gap-4 hover-nav",
-                selectedCategory === name ? "bg-selected" : "border-theme"
+                isActive(href) ? "bg-selected" : "border-theme"
               )}
             >
               <Icon size={24} />
@@ -56,15 +85,18 @@ const Sidebar = () => {
             <a
               className="hover-icon"
               href="https://www.linkedin.com/in/oluwatomiwa-jinadu/"
-              target="
-              blank_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
             >
-              <Linkedin size={24} name="Linkedin" />
+              <Linkedin size={24} />
             </a>
             <a
               className="hover-icon"
               href="https://github.com/Tomiwajin"
-              target="blank_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
             >
               <GithubIcon size={24} />
             </a>
@@ -72,43 +104,43 @@ const Sidebar = () => {
         </nav>
       </aside>
 
-      {/* MOBILE MENU BUTTON  */}
-      <div className="md:hidden fixed top-0 w-full h-16 bg-background z-50">
+      <div className="md:hidden fixed top-0 left-0 w-full h-16 bg-background/80 backdrop-blur-md border-b border-theme z-50 flex items-center justify-between px-5">
+        <Link
+          href="/"
+          className="text-xl font-extrabold font-mono hover:opacity-80 transition-opacity"
+        >
+          TJ
+        </Link>
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="fixed top-5 right-5 md:hidden p-2 hover:scale-105 active:scale-95"
+          className="p-2 hover:scale-105 active:scale-95"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <div>
-          <Link
-            href="/"
-            className=" fixed top-5 left-5 md:hidden p-2 text-xl font-extrabold font-mono"
-          >
-            TJ
-          </Link>
-        </div>
-        {isMenuOpen && (
-          <div
-            onClick={() => setIsMenuOpen(false)}
-            className="fixed inset-0 nav-theme z-30 transition-opacity duration-300 md:hidden"
-          />
-        )}
       </div>
 
-      {/* MOBILE NAV OVERLAY */}
-      <div
+      {isMenuOpen && (
+        <div
+          onClick={() => setIsMenuOpen(false)}
+          className="fixed inset-0 nav-theme z-30 transition-opacity duration-300 md:hidden"
+        />
+      )}
+
+      <nav
         className={cn(
-          "fixed top-0 left-0 h-full w-62 bg-black/70 text-white backdrop-blur-lg z-50 flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed top-0 left-0 h-full w-62 bg-black/70 text-white backdrop-blur-lg z-50",
+          "flex flex-col items-start justify-start gap-2 px-6 transform transition-transform duration-300 ease-out md:hidden",
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <a
-          href="#hero"
+        <Link
+          href="/"
           className="text-2xl font-cookie font-bold mb-10 pl-3 mt-30"
+          onClick={() => setIsMenuOpen(false)}
         >
           Tomiwa Jinadu
-        </a>
+        </Link>
 
         {navItems.map(({ name, href, icon: Icon }) => (
           <Link
@@ -121,25 +153,29 @@ const Sidebar = () => {
             <span>{name}</span>
           </Link>
         ))}
+
         <div className="flex items-center gap-6 mt-20">
           <ThemeToggle />
           <a
             className="hover-icon"
             href="https://www.linkedin.com/in/oluwatomiwa-jinadu/"
-            target="
-              blank_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
           >
-            <Linkedin size={24} name="Linkedin" />
+            <Linkedin size={24} />
           </a>
           <a
             className="hover-icon"
             href="https://github.com/Tomiwajin"
-            target="blank_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
           >
             <GithubIcon size={24} />
           </a>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
