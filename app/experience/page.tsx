@@ -113,7 +113,7 @@ const page = () => {
         <div>
           <p className="mb-4 text-sm font-normal">
             🎓 Achieved{" "}
-            <span className="font-semibold">Dean's List honors</span> for
+            <span className="font-semibold">Dean&apos;s List honors</span> for
             academic excellence.
           </p>
           <div className="mb-4 text-sm font-normal">
@@ -132,7 +132,7 @@ const page = () => {
             </LinkPreview>
           </div>
           <p className="mb-4 text-sm font-normal">
-            🎮 Built "Text Twister" desktop game in C# with scoring mechanics,
+            🎮 Built a Text Twister desktop game in C# with scoring mechanics,
             timer logic, and GUI implementation using Windows Forms.
           </p>
           <p className="mb-4 text-sm font-normal">

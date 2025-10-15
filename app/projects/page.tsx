@@ -10,9 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
+import { ExternalLink, Github, Search } from "lucide-react";
 
 const categories = ["All", "webDev", "MobileDev", "ML", "JavaDev"];
 
@@ -85,6 +84,7 @@ const projects = [
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const filteredProjects = projects.filter((project) => {
     const matchCategory =
@@ -99,110 +99,133 @@ const Page = () => {
   });
 
   return (
-    <div className="md:pl-70 flex flex-col  py-12 md:py-0 animate-fade-in">
-      <div className="flex flex-wrap items-center gap-4">
-        <div className="hidden md:flex flex-wrap gap-4">
-          {categories.map((category) => (
-            <div
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-md border-2  cursor-pointer hover:bg-muted transition-colors ${
-                selectedCategory === category ? "bg-selected" : "border-theme"
-              }`}
+    <div className="md:pl-70 flex flex-col py-8 md:py-0 animate-fade-in">
+      {/* Fixed Header with Search and Filters */}
+      <div className="sticky top-0 mt-6 md:mt-0 z-10 bg-background/80 backdrop-blur-lg pb-4 mb-6 border-b">
+        <div className="flex flex-col md:flex-row gap-4">
+          {/* Search Bar */}
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" />
+            <input
+              type="search"
+              placeholder="Search projects..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-11 pr-4 py-3 rounded-lg border-2 border-theme  focus:outline-none focus:border-indigo-500 transition-colors"
+            />
+          </div>
+
+          {/* Category Dropdown */}
+          <div className="md:w-48">
+            <Select
+              value={selectedCategory}
+              onValueChange={setSelectedCategory}
             >
-              {category}
-            </div>
-          ))}
-        </div>
-
-        <input
-          type="search"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-1 min-w-[150px] px-4 py-2 rounded-md border-2 border-theme focus:outline-none"
-        />
-
-        <div className="md:hidden">
-          <Select onValueChange={setSelectedCategory}>
-            <SelectTrigger className="px-2 py-5">
-              <SelectValue placeholder="Select Category" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Categories</SelectLabel>
-                {categories.map((category) => (
-                  <SelectItem
-                    key={category}
-                    value={category}
-                    className="capitalize"
-                  >
-                    {category}
-                  </SelectItem>
-                ))}
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+              <SelectTrigger className="w-full py-6 rounded-lg">
+                <SelectValue placeholder="Select Category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Categories</SelectLabel>
+                  {categories.map((category) => (
+                    <SelectItem
+                      key={category}
+                      value={category}
+                      className="capitalize"
+                    >
+                      {category}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       </div>
 
+      {/* Instagram-Style Grid */}
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2">
           {filteredProjects.map((project) => (
-            <CardContainer key={project.id} className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
-                >
+            <div
+              key={project.id}
+              className="relative aspect-square group cursor-pointer overflow-hidden"
+              onMouseEnter={() => setHoveredId(project.id)}
+              onMouseLeave={() => setHoveredId(null)}
+            >
+              {/* Project Image */}
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+
+              {/* Hover Overlay */}
+              <div
+                className={`absolute inset-0 bg-black/80 transition-opacity duration-300 flex flex-col justify-center items-center p-4 ${
+                  hoveredId === project.id ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <h3 className="text-white font-bold text-lg md:text-xl mb-2 text-center">
                   {project.title}
-                </CardItem>
-                <CardItem
-                  as="p"
-                  translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                >
+                </h3>
+                <p className="text-gray-300 text-xs md:text-sm text-center mb-4 line-clamp-2">
                   {project.description}
-                </CardItem>
-                <CardItem translateZ="100" className="w-full mt-4">
-                  <Image
-                    src={project.image}
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
-                </CardItem>
-                <div className="flex justify-between items-center mt-20">
-                  <CardItem
-                    translateZ={20}
-                    as="a"
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1 md:gap-2 mb-4 justify-center">
+                  {project.tags.slice(0, 3).map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl text-xs font-normal text-white"
+                    className="p-2 bg-white rounded-full hover:bg-gray-200 transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
-                    Demo →
-                  </CardItem>
-                  <CardItem
-                    translateZ={20}
-                    as="a"
+                    <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-black" />
+                  </a>
+                  <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl text-white bg-indigo-500 text-xs font-bold"
+                    className="p-2 bg-indigo-500 rounded-full hover:bg-indigo-600 transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
-                    GitHub
-                  </CardItem>
+                    <Github className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  </a>
                 </div>
-              </CardBody>
-            </CardContainer>
+              </div>
+
+              {/* Mobile Tap Indicator */}
+              <div className="md:hidden absolute top-2 right-2 bg-black/50 rounded-full p-1">
+                <ExternalLink className="w-4 h-4 text-white" />
+              </div>
+            </div>
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-500 dark:text-gray-400 mt-10">
-          No results found.
-        </p>
+        <div className="flex flex-col items-center justify-center py-20">
+          <div className="text-6xl mb-4">🔍</div>
+          <p className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+            No projects found
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Try adjusting your search or filters
+          </p>
+        </div>
       )}
     </div>
   );
