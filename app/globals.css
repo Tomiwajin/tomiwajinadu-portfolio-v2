@@ -27,6 +27,10 @@
     --border: 0 0% 100% / 0.1;
   }
 
+  html {
+    background-color: hsl(var(--background));
+  }
+
   body {
     @apply bg-background text-foreground;
   }

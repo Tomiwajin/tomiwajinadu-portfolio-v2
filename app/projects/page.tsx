@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Image from "next/image";
-import { ExternalLink, Github, Search } from "lucide-react";
+import { ExternalLink, Github, Search, Heart, Eye, Bookmark } from "lucide-react";
 
 const categories = ["All", "webDev", "MobileDev", "ML", "JavaDev"];
 
@@ -26,6 +26,8 @@ const projects = [
     demoUrl: "https://job-app-tracker-gmail.vercel.app/",
     githubUrl: "https://github.com/Tomiwajin/job-app-tracker-gmail.git",
     category: "webDev",
+    views: 2847,
+    likes: 342,
   },
   {
     id: 2,
@@ -37,6 +39,8 @@ const projects = [
     demoUrl: "https://tomiwa-jinadu-portfolio-v1.vercel.app",
     githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
     category: "webDev",
+    views: 1923,
+    likes: 287,
   },
   {
     id: 3,
@@ -47,6 +51,8 @@ const projects = [
     demoUrl: "https://task-manager-nr9n.onrender.com",
     githubUrl: "https://github.com/Tomiwajin/Task-Manager.git",
     category: "JavaDev",
+    views: 1456,
+    likes: 198,
   },
   {
     id: 4,
@@ -58,6 +64,8 @@ const projects = [
     githubUrl:
       "https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git",
     category: "JavaDev",
+    views: 892,
+    likes: 134,
   },
   {
     id: 5,
@@ -68,6 +76,8 @@ const projects = [
     demoUrl: "https://house-price-prediction-gzd4.onrender.com",
     githubUrl: "https://github.com/Tomiwajin/House-price-prediction",
     category: "ML",
+    views: 1672,
+    likes: 245,
   },
   {
     id: 6,
@@ -78,6 +88,8 @@ const projects = [
     demoUrl: "https://tomiwajin.github.io/OluwatomiwaJinadu_Project/",
     githubUrl: "https://github.com/Tomiwajin/OluwatomiwaJinadu_Project.git",
     category: "webDev",
+    views: 1034,
+    likes: 156,
   },
 ];
 
@@ -145,7 +157,7 @@ const Page = () => {
 
       {/* Instagram-Style Grid */}
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -163,31 +175,49 @@ const Page = () => {
 
               {/* Hover Overlay */}
               <div
-                className={`absolute inset-0 bg-black/80 transition-opacity duration-300 flex flex-col justify-center items-center p-4 ${
+                className={`absolute inset-0 bg-black/80 transition-opacity duration-300 flex flex-col justify-between p-4 ${
                   hoveredId === project.id ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <h3 className="text-white font-bold text-lg md:text-xl mb-2 text-center">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 text-xs md:text-sm text-center mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1 md:gap-2 mb-4 justify-center">
-                  {project.tags.slice(0, 3).map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* Top Stats - Instagram Style */}
+                <div className="flex items-center justify-between text-white text-sm">
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-1">
+                      <Eye className="w-4 h-4" />
+                      <span>{project.views.toLocaleString()}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Heart className="w-4 h-4 fill-white" />
+                      <span>{project.likes}</span>
+                    </div>
+                  </div>
+                  <Bookmark className="w-5 h-5 cursor-pointer hover:fill-white transition-all" />
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3">
+                {/* Center Content */}
+                <div className="flex flex-col items-center justify-center flex-1">
+                  <h3 className="text-white font-bold text-lg md:text-xl mb-2 text-center">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 text-xs md:text-sm text-center mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1 md:gap-2 mb-4 justify-center">
+                    {project.tags.slice(0, 3).map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Action Buttons */}
+                <div className="flex gap-3 justify-center">
                   <a
                     href={project.demoUrl}
                     target="_blank"
@@ -209,9 +239,19 @@ const Page = () => {
                 </div>
               </div>
 
-              {/* Mobile Tap Indicator */}
-              <div className="md:hidden absolute top-2 right-2 bg-black/50 rounded-full p-1">
-                <ExternalLink className="w-4 h-4 text-white" />
+              {/* Mobile Stats - Always Visible */}
+              <div className="md:hidden absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-xs bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2">
+                <div className="flex gap-3">
+                  <div className="flex items-center gap-1">
+                    <Eye className="w-3 h-3" />
+                    <span>{project.views.toLocaleString()}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Heart className="w-3 h-3 fill-white" />
+                    <span>{project.likes}</span>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4" />
               </div>
             </div>
           ))}

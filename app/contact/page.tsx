@@ -34,23 +34,23 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col animate-fade-in">
       {/* Header Section */}
-      <div className="pl-6 md:pl-90 mt-10 mb-8">
+      <div className="pl-6 md:pl-70 mt-10 mb-8">
         <div className="inline-flex items-center gap-2 mb-4">
-          <Sparkles className="w-6 h-6 text-purple-500 animate-pulse" />
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <Sparkles className="w-6 h-6 text-indigo-500 animate-pulse" />
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
             Let&apos;s Connect
           </h1>
-          <Sparkles className="w-6 h-6 text-pink-500 animate-pulse" />
+          <Sparkles className="w-6 h-6 text-blue-500 animate-pulse" />
         </div>
-        <p className="text-gray-600 text-base md:text-lg mt-2">
+        <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg mt-2">
           I&apos;m always up for a chat or coffee{" "}
-          <Coffee className="inline-block w-5 h-5 text-purple-500 animate-bounce" />
+          <Coffee className="inline-block w-5 h-5 text-indigo-500" />
           ! Feel free to reach out.
         </p>
       </div>
 
       {/* Contact Cards */}
-      <div className="pl-6 md:pl-90">
+      <div className="pl-6 md:pl-70">
         <HoverEffect items={medium} />
       </div>
     </div>

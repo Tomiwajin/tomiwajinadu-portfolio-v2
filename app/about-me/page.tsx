@@ -15,8 +15,7 @@ const Page = () => {
         <div className="mt-4">
           I recently earned a B.S. in Computing from the{" "}
           <LinkPreview url="https://www.westga.edu" className="font-bold">
-            {" "}
-            University of West Georgia.
+            University of West Georgia
           </LinkPreview>
           , where I contributed to projects ranging from a Flutter-based elderly
           assistance app to a systems-level client-server model in Rust. My

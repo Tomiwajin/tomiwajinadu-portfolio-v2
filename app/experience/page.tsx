@@ -1,13 +1,29 @@
+"use client";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { Heart, MessageCircle, Bookmark, Calendar } from "lucide-react";
 
 const page = () => {
   const data = [
     {
       title: "2025",
       content: (
-        <div>
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          {/* Instagram-style header */}
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">Recent Highlights</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>287</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
+          </div>
           <div className="mb-4 text-sm font-normal">
             🎓 Graduated with a B.S. in Computing from the
             <LinkPreview url="https://www.westga.edu" className="font-bold">
@@ -62,7 +78,21 @@ const page = () => {
     {
       title: "2024",
       content: (
-        <div>
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          {/* Instagram-style header */}
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">2024 Achievements</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>194</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
+          </div>
           <div className="mb-4 text-sm font-normal">
             🦀{" "}
             <span className="font-semibold">
@@ -110,7 +140,21 @@ const page = () => {
     {
       title: "2023",
       content: (
-        <div>
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          {/* Instagram-style header */}
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">2023 Journey</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>156</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
+          </div>
           <p className="mb-4 text-sm font-normal">
             🎓 Achieved{" "}
             <span className="font-semibold">Dean&apos;s List honors</span> for
@@ -150,7 +194,21 @@ const page = () => {
     {
       title: "2022",
       content: (
-        <div>
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          {/* Instagram-style header */}
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">2022 Growth</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>128</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
+          </div>
           <p className="mb-4 text-sm font-normal">
             🗄️ Built multiple CRUD applications using MongoDB and PostgreSQL to
             master NoSQL and relational database paradigms, schema design, and
@@ -176,7 +234,21 @@ const page = () => {
     {
       title: "2021",
       content: (
-        <div>
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          {/* Instagram-style header */}
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">2021 Beginnings</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>95</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
+          </div>
           <div className="mb-4 text-sm font-normal">
             🎓 Started college at the{" "}
             <LinkPreview url="https://www.westga.edu" className="font-bold">
@@ -203,7 +275,7 @@ const page = () => {
   ];
 
   return (
-    <div className="px-4 md:px-70 relative w-full overflow-clip animate-fade-in">
+    <div className="px-4 md:pl-70 relative w-full overflow-clip animate-fade-in">
       <Timeline data={data} />
     </div>
   );

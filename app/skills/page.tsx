@@ -70,7 +70,7 @@ const skills = [
   {
     icon: SiTypescript,
     title: "TypeScript",
-    description: "High-level language for interactive web development.",
+    description: "Typed superset of JavaScript for scalable applications.",
     link: "https://www.typescriptlang.org",
     category: "frontend",
   },
@@ -385,13 +385,42 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4">
         {filteredSkills.length > 0 ? (
-          <HoverEffect items={filteredSkills} />
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+            {filteredSkills.map((skill, idx) => (
+              <a
+                key={idx}
+                href={skill.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 group"
+              >
+                {/* IG Highlight Style Circle */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 rounded-full group-hover:scale-110 transition-transform"></div>
+                  <div className="relative p-[3px] rounded-full">
+                    <div className="bg-background rounded-full p-4 md:p-5">
+                      <skill.icon className="h-8 w-8 md:h-10 md:w-10 text-indigo-500" />
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs md:text-sm text-center font-medium line-clamp-2">
+                  {skill.title}
+                </span>
+              </a>
+            ))}
+          </div>
         ) : (
-          <p className="text-center text-gray-500 dark:text-gray-400">
-            No results found.
-          </p>
+          <div className="flex flex-col items-center justify-center py-20">
+            <div className="text-6xl mb-4">🔍</div>
+            <p className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              No skills found
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Try adjusting your search or filters
+            </p>
+          </div>
         )}
       </div>
     </div>
