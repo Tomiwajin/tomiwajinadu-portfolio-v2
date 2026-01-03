@@ -9,7 +9,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
 import {
   DiJava,
   DiPython,

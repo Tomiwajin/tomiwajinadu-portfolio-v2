@@ -2,7 +2,7 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { Heart, MessageCircle, Bookmark, Calendar } from "lucide-react";
+import { Heart, Bookmark, Calendar } from "lucide-react";
 
 const page = () => {
   const data = [

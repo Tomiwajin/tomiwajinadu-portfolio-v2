@@ -164,25 +164,7 @@ const RecruiterView = () => {
               </div>
             </PinContainer>
           </div>
-          <div className="flex -ml-45 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-2">
-            <PinContainer title="/work auth" href="/work-auth">
-              <div className="tracking-tight w-[16rem] h-[24rem]">
-                <Image
-                  src="/Posts/Work-Authorization.jpg"
-                  alt="Work-Auth Post"
-                  width={256}
-                  height={384}
-                  className="h-full w-full"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <h2 className="text-white text-xl font-semibold">
-                    Work Authorization
-                  </h2>
-                </div>
-              </div>
-            </PinContainer>
-          </div>
-          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-3">
+          <div className="flex -ml-65 -mt-40 md:-ml-30 md:mt-0 opacity-0 animate-fade-in-delay-2">
             <PinContainer title="/GitHub" href="https://github.com/Tomiwajin">
               <div className="tracking-tight w-[16rem] h-[24rem]">
                 <Image
@@ -270,25 +252,8 @@ const RecruiterView = () => {
         </div>
         <div className="flex flex-row w-full gap-2 -mt-10">
           <Link
-            href="work-auth"
-            className="w-1/2 h-60 border relative overflow-hidden active:scale-105 opacity-0 animate-fade-in-delay-2"
-          >
-            <Image
-              src="/Posts/Work-Authorization.jpg"
-              alt="Work-Auth Post"
-              fill
-              className="h-full w-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20"></div>
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h2 className="text-white text-xl font-semibold">
-                Work Authorization
-              </h2>
-            </div>
-          </Link>
-          <Link
             href="https://github.com/Tomiwajin"
-            className="w-1/2 h-60 border relative overflow-hidden active:scale-105 opacity-0 animate-fade-in-delay-3"
+            className="w-full h-60 border relative overflow-hidden active:scale-105 opacity-0 animate-fade-in-delay-2"
             target="blank_"
           >
             <Image
