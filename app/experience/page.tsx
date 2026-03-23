@@ -7,7 +7,7 @@ import { Heart, Bookmark, Calendar } from "lucide-react";
 const page = () => {
   const data = [
     {
-      title: "2025 – Now",
+      title: "2026",
       content: (
         <div className="border border-theme rounded-2xl p-6 bg-background">
           <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
@@ -24,10 +24,13 @@ const page = () => {
             </div>
           </div>
 
-          <p className="mb-4 text-sm font-normal">
+          <div className="mb-4 text-sm font-normal">
             🚀{" "}
             <span className="font-semibold">
-              Full-Stack Software Engineer at DAKDAAN Worldwide
+              Full-Stack Software Engineer at{" "}
+              <LinkPreview url="https://dakdaan.com" className="font-bold">
+                DAKDAAN Worldwide
+              </LinkPreview>
             </span>{" "}
             (Oct 2025 – Present) — Shipped Haul United as sole developer: a
             Flutter driver app live on the App Store &amp; Play Store, a
@@ -38,7 +41,7 @@ const page = () => {
             for 11 DAKDAAN brands with a portal used daily by 350+ staff.
             Cut annual infrastructure costs by 22% migrating to a
             self-hosted Linux/Docker/Nginx stack.
-          </p>
+          </div>
 
           <div className="mb-4 text-sm font-normal">
             🎓 Graduated with a B.S. in Computing from the
@@ -50,14 +53,13 @@ const page = () => {
           <p className="mb-4 text-sm font-normal">
             👨🏽‍💻{" "}
             <span className="font-semibold">
-              Software Engineer Intern at Bemelo Inc
+              Software Engineering Intern at Bemelo Health
             </span>{" "}
-            (Jan – May 2025) — Built the company's cross-platform mental
-            health app as sole engineer using Flutter and Firebase, shipping
-            AI therapist chat, therapist matching, community groups, and
-            wellness challenges. Increased test-user engagement by 40%
-            through a gamified points system and A/B tests on the onboarding
-            flow.
+            – Developed a cross-platform mental health app MVP using Flutter,
+            Firebase, WebRTC, and OpenAI API. Built CI/CD pipeline with GitHub
+            Actions, reducing release cycle time by 60%. Implemented
+            HIPAA-compliant security measures including end-to-end encryption
+            (TLS 1.3), OAuth 2.0, and multi-factor authentication.
           </p>
 
           <div className="mb-4 text-sm font-normal">

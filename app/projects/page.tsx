@@ -12,7 +12,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Image from "next/image";
-import { ExternalLink, Github, Search, Heart, Eye, Bookmark, Star } from "lucide-react";
+import { ExternalLink, Search, Heart, Eye, Bookmark, Star } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 const categoryLabels: Record<string, string> = {
   All: "All",
@@ -38,6 +39,34 @@ const projects = [
     views: 2847,
     likes: 342,
     featured: true,
+  },
+  {
+    id: 7,
+    title: "Haul United Driver App",
+    description:
+      "Flutter driver app live on the App Store & Play Store. Real-time GPS, SOS flows, Mapbox truck routing, push notifications, and load management. Built as sole developer.",
+    image: "/projects/haul-united-driver.png",
+    tags: ["Flutter", "Supabase", "Mapbox", "GraphQL"],
+    demoUrl: "https://apps.apple.com/app/haul-united/id6738919718",
+    githubUrl: "https://github.com/Sports-Media-Interns/haul-united-driver",
+    category: "MobileDev",
+    views: 3241,
+    likes: 418,
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "DAKDAAN HR Portal",
+    description:
+      "Internal HR platform for 11 DAKDAAN brands used by 350+ staff daily. 7-tier RBAC, multi-level approvals, task assignment, document sharing, and integrations with Slack, LinkedIn, and OpenAI.",
+    image: "/projects/staff2-hr-portal.png",
+    tags: ["Next.js", "TypeScript", "ASP.NET", "PostgreSQL"],
+    demoUrl: "https://staff2.dakdaan.com",
+    githubUrl: "https://github.com/Sports-Media-Interns/staff2",
+    category: "webDev",
+    views: 1876,
+    likes: 203,
+    featured: false,
   },
   {
     id: 2,
@@ -250,7 +279,7 @@ const Page = () => {
                       className="p-2 bg-indigo-500 rounded-full hover:bg-indigo-600 transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Github className="w-4 h-4 text-white" />
+                      <FaGithub className="w-4 h-4 text-white" />
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-white/80 text-xs bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
@@ -357,7 +386,7 @@ const Page = () => {
                       className="p-2 bg-indigo-500 rounded-full hover:bg-indigo-600 transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Github className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                      <FaGithub className="w-4 h-4 md:w-5 md:h-5 text-white" />
                     </a>
                   </div>
                 </div>
