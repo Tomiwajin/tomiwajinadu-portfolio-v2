@@ -20,6 +20,7 @@ const RecruiterView = () => {
               width={256}
               height={384}
               className="rounded-full w-20 h-20 md:w-40 md:h-40 object-cover"
+              priority
             />
           </div>
         </div>
@@ -42,7 +43,7 @@ const RecruiterView = () => {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <button
-              onClick={() => window.open("/TomiwaJinaduResume.pdf", "_blank")}
+              onClick={() => window.open("/api/resume", "_blank")}
               className="group relative overflow-hidden rounded-md border-indigo-500 bg-indigo-500 font-semibold shadow-md w-[120px] h-[40px]"
             >
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-0 group-hover:-translate-x-full text-white">

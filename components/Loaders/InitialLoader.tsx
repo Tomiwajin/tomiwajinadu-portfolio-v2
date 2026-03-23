@@ -7,7 +7,15 @@ export default function Initial() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
+    // Skip loader entirely on repeat visits within the same session
+    if (sessionStorage.getItem("visited")) {
+      setIsLoading(false);
+      return;
+    }
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      sessionStorage.setItem("visited", "1");
+    }, 800);
     return () => clearTimeout(timer);
   }, []);
 

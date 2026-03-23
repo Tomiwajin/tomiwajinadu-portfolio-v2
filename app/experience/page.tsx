@@ -7,10 +7,9 @@ import { Heart, Bookmark, Calendar } from "lucide-react";
 const page = () => {
   const data = [
     {
-      title: "2025",
+      title: "2025 – Now",
       content: (
         <div className="border border-theme rounded-2xl p-6 bg-background">
-          {/* Instagram-style header */}
           <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-indigo-500" />
@@ -19,59 +18,67 @@ const page = () => {
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-1">
                 <Heart className="w-4 h-4" />
-                <span>287</span>
+                <span>342</span>
               </div>
               <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
             </div>
           </div>
+
+          <p className="mb-4 text-sm font-normal">
+            🚀{" "}
+            <span className="font-semibold">
+              Full-Stack Software Engineer at DAKDAAN Worldwide
+            </span>{" "}
+            (Oct 2025 – Present) — Shipped Haul United as sole developer: a
+            Flutter driver app live on the App Store &amp; Play Store, a
+            Next.js web platform, and an internal ops console for live load
+            monitoring. Built driver safety features including real-time GPS
+            tracking, SOS emergency flows, and Mapbox routing adjusted for
+            truck height/weight restrictions. Replaced the legacy HR system
+            for 11 DAKDAAN brands with a portal used daily by 350+ staff.
+            Cut annual infrastructure costs by 22% migrating to a
+            self-hosted Linux/Docker/Nginx stack.
+          </p>
+
           <div className="mb-4 text-sm font-normal">
             🎓 Graduated with a B.S. in Computing from the
             <LinkPreview url="https://www.westga.edu" className="font-bold">
-              {" "}
-              University of West Georgia.
-            </LinkPreview>{" "}
+              {" "}University of West Georgia.
+            </LinkPreview>
           </div>
+
           <p className="mb-4 text-sm font-normal">
             👨🏽‍💻{" "}
             <span className="font-semibold">
-              Software Engineering Intern at Bemelo Health
+              Software Engineer Intern at Bemelo Inc
             </span>{" "}
-            – Developed a cross-platform mental health app MVP using Flutter,
-            Firebase, WebRTC, and OpenAI API. Built CI/CD pipeline with GitHub
-            Actions, reducing release cycle time by 60%. Implemented
-            HIPAA-compliant security measures including end-to-end encryption
-            (TLS 1.3), OAuth 2.0, and multi-factor authentication.
+            (Jan – May 2025) — Built the company's cross-platform mental
+            health app as sole engineer using Flutter and Firebase, shipping
+            AI therapist chat, therapist matching, community groups, and
+            wellness challenges. Increased test-user engagement by 40%
+            through a gamified points system and A/B tests on the onboarding
+            flow.
           </p>
+
           <div className="mb-4 text-sm font-normal">
             🤖 <span className="font-semibold">Launched CareerSync</span> –
-            Open-source AI-powered job tracker that auto-parses emails. Deployed
-            custom fine-tuned SetFit classifier and T5 extractor models on
-            Hugging Face achieving 95% accuracy. Handles 6,000+ emails per user
-            at 2s average latency with analytics dashboard.
-            <LinkPreview
-              url="http://careersync.cloud"
-              className="font-bold ml-1"
-            >
+            Job tracker used by 78+ people that automatically syncs with
+            Gmail via OAuth 2.0. Sped up email processing 3× by batching
+            Hugging Face inference requests with real-time progress
+            streaming.{" "}
+            <LinkPreview url="http://careersync.cloud" className="font-bold">
               careersync.cloud
             </LinkPreview>
           </div>
+
           <p className="mb-4 text-sm font-normal">
             ☁️ Earned{" "}
             <span className="font-semibold">
-              Oracle Cloud Infrastructure (OCI) Certified Foundations Associate
+              Oracle Cloud Infrastructure (OCI) 2025 Certified Foundations
+              Associate
             </span>{" "}
             certification.
           </p>
-          <div className="mb-4 text-sm font-normal">
-            🚗 Developed a{" "}
-            <LinkPreview
-              url="https://tomiwajin.github.io/OluwatomiwaJinadu_Project/"
-              className="font-bold"
-            >
-              Carpool Website
-            </LinkPreview>{" "}
-            using modern web technologies to connect local drivers and riders.
-          </div>
         </div>
       ),
     },
