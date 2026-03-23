@@ -13,12 +13,12 @@ const page = () => {
           <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-indigo-500" />
-              <span className="font-semibold text-sm">Recent Highlights</span>
+              <span className="font-semibold text-sm">Currently</span>
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-1">
                 <Heart className="w-4 h-4" />
-                <span>342</span>
+                <span>412</span>
               </div>
               <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
             </div>
@@ -28,19 +28,46 @@ const page = () => {
             🚀{" "}
             <span className="font-semibold">
               Full-Stack Software Engineer at{" "}
-              <LinkPreview url="https://dakdaan.com" className="font-bold">
+              <LinkPreview url="https://dakden.com" className="font-bold">
                 DAKDAAN Worldwide
+              </LinkPreview>{" "}
+              /{" "}
+              <LinkPreview url="https://staff.sportsmedia.net" className="font-bold">
+                Sports Media Inc
               </LinkPreview>
             </span>{" "}
-            (Oct 2025 – Present) — Shipped Haul United as sole developer: a
-            Flutter driver app live on the App Store &amp; Play Store, a
-            Next.js web platform, and an internal ops console for live load
-            monitoring. Built driver safety features including real-time GPS
-            tracking, SOS emergency flows, and Mapbox routing adjusted for
-            truck height/weight restrictions. Replaced the legacy HR system
-            for 11 DAKDAAN brands with a portal used daily by 350+ staff.
-            Cut annual infrastructure costs by 22% migrating to a
+            (Oct 2025 – Present) — Shipping{" "}
+            <LinkPreview url="https://www.haulunited.com" className="font-bold">
+              Haul United
+            </LinkPreview>{" "}
+            as sole developer: a Flutter driver app live on the App Store &amp;
+            Play Store, a Next.js web platform, and an internal ops console for
+            live load monitoring. Built driver safety features including
+            real-time GPS tracking, SOS emergency flows, and Mapbox routing
+            adjusted for truck height/weight restrictions. Replaced the legacy
+            HR system for 11 DAKDAAN brands with a portal used daily by 350+
+            staff. Cut annual infrastructure costs by 22% migrating to a
             self-hosted Linux/Docker/Nginx stack.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2025",
+      content: (
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">2025 Highlights</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>287</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
           </div>
 
           <div className="mb-4 text-sm font-normal">
@@ -64,10 +91,10 @@ const page = () => {
 
           <div className="mb-4 text-sm font-normal">
             🤖 <span className="font-semibold">Launched CareerSync</span> –
-            Job tracker used by 78+ people that automatically syncs with
-            Gmail via OAuth 2.0. Sped up email processing 3× by batching
-            Hugging Face inference requests with real-time progress
-            streaming.{" "}
+            Open-source AI-powered job tracker that auto-parses emails. Deployed
+            custom fine-tuned SetFit classifier and T5 extractor models on
+            Hugging Face achieving 95% accuracy. Handles 6,000+ emails per user
+            at 2s average latency with analytics dashboard.{" "}
             <LinkPreview url="http://careersync.cloud" className="font-bold">
               careersync.cloud
             </LinkPreview>
@@ -76,11 +103,21 @@ const page = () => {
           <p className="mb-4 text-sm font-normal">
             ☁️ Earned{" "}
             <span className="font-semibold">
-              Oracle Cloud Infrastructure (OCI) 2025 Certified Foundations
-              Associate
+              Oracle Cloud Infrastructure (OCI) 2025 Certified Foundations Associate
             </span>{" "}
             certification.
           </p>
+
+          <div className="mb-4 text-sm font-normal">
+            🚗 Developed a{" "}
+            <LinkPreview
+              url="https://tomiwajin.github.io/OluwatomiwaJinadu_Project/"
+              className="font-bold"
+            >
+              Carpool Website
+            </LinkPreview>{" "}
+            using modern web technologies to connect local drivers and riders.
+          </div>
         </div>
       ),
     },
