@@ -19,6 +19,11 @@ export default function HomePage() {
 
   const handleSelect = (viewer: "recruiter" | "developer" | "stalker") => {
     setViewer(viewer);
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event: `viewer:${viewer}` }),
+    }).catch(() => {});
     router.push("/home");
   };
 

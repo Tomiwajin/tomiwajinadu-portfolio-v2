@@ -7,14 +7,59 @@ import { Heart, Bookmark, Calendar } from "lucide-react";
 const page = () => {
   const data = [
     {
-      title: "2025",
+      title: "2026",
       content: (
         <div className="border border-theme rounded-2xl p-6 bg-background">
-          {/* Instagram-style header */}
           <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-indigo-500" />
-              <span className="font-semibold text-sm">Recent Highlights</span>
+              <span className="font-semibold text-sm">Currently</span>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                <span>412</span>
+              </div>
+              <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
+            </div>
+          </div>
+
+          <div className="mb-4 text-sm font-normal">
+            🚀{" "}
+            <span className="font-semibold">
+              Full-Stack Software Engineer at{" "}
+              <LinkPreview url="https://dakden.com" className="font-bold">
+                DAKDAAN Worldwide
+              </LinkPreview>{" "}
+              /{" "}
+              <LinkPreview url="https://sportsmedia.net" className="font-bold">
+                Sports Media Inc
+              </LinkPreview>
+            </span>{" "}
+            (Oct 2025 – Present) — Shipping{" "}
+            <LinkPreview url="https://www.haulunited.com" className="font-bold">
+              Haul United
+            </LinkPreview>{" "}
+            as sole developer: a Flutter driver app live on the App Store &amp;
+            Play Store, a Next.js web platform, and an internal ops console for
+            live load monitoring. Built driver safety features including
+            real-time GPS tracking, SOS emergency flows, and Mapbox routing
+            adjusted for truck height/weight restrictions. Replaced the legacy
+            HR system for 11 DAKDAAN brands with a portal used daily by 350+
+            staff. Cut annual infrastructure costs by 22% migrating to a
+            self-hosted Linux/Docker/Nginx stack.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2025",
+      content: (
+        <div className="border border-theme rounded-2xl p-6 bg-background">
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-theme">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-indigo-500" />
+              <span className="font-semibold text-sm">2025 Highlights</span>
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-1">
@@ -24,13 +69,14 @@ const page = () => {
               <Bookmark className="w-4 h-4 cursor-pointer hover:fill-current transition-all" />
             </div>
           </div>
+
           <div className="mb-4 text-sm font-normal">
             🎓 Graduated with a B.S. in Computing from the
             <LinkPreview url="https://www.westga.edu" className="font-bold">
-              {" "}
-              University of West Georgia.
-            </LinkPreview>{" "}
+              {" "}University of West Georgia.
+            </LinkPreview>
           </div>
+
           <p className="mb-4 text-sm font-normal">
             👨🏽‍💻{" "}
             <span className="font-semibold">
@@ -42,26 +88,26 @@ const page = () => {
             HIPAA-compliant security measures including end-to-end encryption
             (TLS 1.3), OAuth 2.0, and multi-factor authentication.
           </p>
+
           <div className="mb-4 text-sm font-normal">
             🤖 <span className="font-semibold">Launched CareerSync</span> –
             Open-source AI-powered job tracker that auto-parses emails. Deployed
             custom fine-tuned SetFit classifier and T5 extractor models on
             Hugging Face achieving 95% accuracy. Handles 6,000+ emails per user
-            at 2s average latency with analytics dashboard.
-            <LinkPreview
-              url="http://careersync.cloud"
-              className="font-bold ml-1"
-            >
+            at 2s average latency with analytics dashboard.{" "}
+            <LinkPreview url="http://careersync.cloud" className="font-bold">
               careersync.cloud
             </LinkPreview>
           </div>
+
           <p className="mb-4 text-sm font-normal">
             ☁️ Earned{" "}
             <span className="font-semibold">
-              Oracle Cloud Infrastructure (OCI) Certified Foundations Associate
+              Oracle Cloud Infrastructure (OCI) 2025 Certified Foundations Associate
             </span>{" "}
             certification.
           </p>
+
           <div className="mb-4 text-sm font-normal">
             🚗 Developed a{" "}
             <LinkPreview

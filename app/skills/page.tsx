@@ -47,6 +47,14 @@ import {
   SiHeroku,
   SiNetlify,
   SiVercel,
+  SiDart,
+  SiSupabase,
+  SiGraphql,
+  SiMapbox,
+  SiNginx,
+  SiLinux,
+  SiOpenai,
+  SiPytorch,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -117,6 +125,14 @@ const skills = [
     category: "frontend",
   },
 
+  {
+    icon: SiDart,
+    title: "Dart",
+    description: "Language powering Flutter apps.",
+    link: "https://dart.dev",
+    category: "frontend",
+  },
+
   // Backend
   {
     icon: DiNodejs,
@@ -166,6 +182,14 @@ const skills = [
     title: "C#",
     description: "Object-oriented programming language from Microsoft.",
     link: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+    category: "backend",
+  },
+
+  {
+    icon: SiGraphql,
+    title: "GraphQL",
+    description: "Query language for APIs.",
+    link: "https://graphql.org",
     category: "backend",
   },
 
@@ -248,6 +272,28 @@ const skills = [
     category: "tools",
   },
 
+  {
+    icon: SiMapbox,
+    title: "Mapbox",
+    description: "Maps and navigation SDK for mobile and web.",
+    link: "https://mapbox.com",
+    category: "tools",
+  },
+  {
+    icon: SiNginx,
+    title: "Nginx",
+    description: "High-performance web server and reverse proxy.",
+    link: "https://nginx.org",
+    category: "tools",
+  },
+  {
+    icon: SiLinux,
+    title: "Linux",
+    description: "Open-source OS for servers and development.",
+    link: "https://kernel.org",
+    category: "tools",
+  },
+
   // Cloud
   {
     icon: SiFirebase,
@@ -275,6 +321,21 @@ const skills = [
     title: "GitHub Actions",
     description: "CI/CD workflows for GitHub projects.",
     link: "https://github.com/features/actions",
+    category: "cloud",
+  },
+
+  {
+    icon: SiSupabase,
+    title: "Supabase",
+    description: "Open-source Firebase alternative with PostgreSQL.",
+    link: "https://supabase.com",
+    category: "cloud",
+  },
+  {
+    icon: SiOpenai,
+    title: "OpenAI API",
+    description: "GPT and AI model integrations.",
+    link: "https://platform.openai.com",
     category: "cloud",
   },
 
@@ -312,6 +373,13 @@ const skills = [
     title: "TensorFlow",
     description: "End-to-end open source machine learning platform.",
     link: "https://tensorflow.org",
+    category: "data",
+  },
+  {
+    icon: SiPytorch,
+    title: "PyTorch",
+    description: "Deep learning framework for research and production.",
+    link: "https://pytorch.org",
     category: "data",
   },
 ];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Grid, Volume2, ExternalLink } from "lucide-react";
 import { PinContainer } from "@/components/ui/3d-pin";
@@ -7,6 +7,19 @@ import Image from "next/image";
 
 const RecruiterView = () => {
   const words = ["Efficiency", "usability", "scalability"];
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailCopy = () => {
+    navigator.clipboard.writeText("oluwatomiwajinadu@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event: "email:copy" }),
+    }).catch(() => {});
+  };
 
   return (
     <div className="pl-4 md:pl-100 flex flex-col gap-20">
@@ -20,6 +33,7 @@ const RecruiterView = () => {
               width={256}
               height={384}
               className="rounded-full w-20 h-20 md:w-40 md:h-40 object-cover"
+              priority
             />
           </div>
         </div>
@@ -31,8 +45,11 @@ const RecruiterView = () => {
             <button
               title="Pronounciation"
               onClick={() => {
-                const audio = new Audio("Audio/name_pron.mp4");
-                audio.play();
+                if (!audioRef.current) {
+                  audioRef.current = new Audio("Audio/name_pron.mp4");
+                }
+                audioRef.current.currentTime = 0;
+                audioRef.current.play();
               }}
               className="hover:scale-105 active:scale-95 transition-transform"
             >
@@ -42,7 +59,7 @@ const RecruiterView = () => {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <button
-              onClick={() => window.open("/TomiwaJinaduResume.pdf", "_blank")}
+              onClick={() => window.open("/api/resume", "_blank")}
               className="group relative overflow-hidden rounded-md border-indigo-500 bg-indigo-500 font-semibold shadow-md w-[120px] h-[40px]"
             >
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-0 group-hover:-translate-x-full text-white">
@@ -54,16 +71,14 @@ const RecruiterView = () => {
             </button>
 
             <button
-              onClick={() =>
-                window.open("mailto:oluwatomiwajinadu@gmail.com", "_blank")
-              }
+              onClick={handleEmailCopy}
               className="group relative overflow-hidden rounded-md border font-semibold shadow-md w-[120px] h-[40px] button"
             >
-              <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-0 group-hover:-translate-x-full">
+              <span className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${copied ? "-translate-x-full" : "translate-x-0 group-hover:-translate-x-full"}`}>
                 Email me
               </span>
-              <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 translate-x-full group-hover:translate-x-0">
-                Let&#39;s talk 💌
+              <span className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${copied ? "translate-x-0" : "translate-x-full group-hover:translate-x-0"}`}>
+                {copied ? "Copied! ✓" : "Let's talk 💌"}
               </span>
             </button>
           </div>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import InitialLoader from "@/components/Loaders/InitialLoader";
 import Visibility from "@/components/Sidebar/Visibilty";
 import PageSwitchLoader from "@/components/Loaders/PageSwitchLoader";
 import { ViewerProvider } from "@/components/Context/ViewerProvider";
@@ -34,11 +33,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Inline script: applies dark/light class before first paint — eliminates white flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(!t&&d)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}})()`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <InitialLoader />
         <ViewerProvider>
           <PageSwitchLoader />
           <Visibility>{children}</Visibility>
