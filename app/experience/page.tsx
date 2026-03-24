@@ -32,7 +32,7 @@ const page = () => {
                 DAKDAAN Worldwide
               </LinkPreview>{" "}
               /{" "}
-              <LinkPreview url="https://staff.sportsmedia.net" className="font-bold">
+              <LinkPreview url="https://sportsmedia.net" className="font-bold">
                 Sports Media Inc
               </LinkPreview>
             </span>{" "}
