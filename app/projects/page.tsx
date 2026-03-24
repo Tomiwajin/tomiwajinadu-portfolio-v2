@@ -293,7 +293,10 @@ const Page = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 bg-white rounded-full hover:bg-gray-200 transition-colors"
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          fetch("/api/track", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ event: "project:demo", metadata: { project: project.title } }) }).catch(() => {});
+                        }}
                       >
                         <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-black" />
                       </a>

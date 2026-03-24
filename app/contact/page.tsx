@@ -99,6 +99,7 @@ const ContactPage = () => {
             href="https://www.linkedin.com/in/oluwatomiwa-jinadu/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => fetch("/api/track", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ event: "contact:linkedin" }) }).catch(() => {})}
             className="group flex items-center justify-between p-4 rounded-xl border border-theme hover:border-indigo-500/50 bg-background hover:bg-indigo-500/5 transition-all duration-200"
           >
             <div className="flex items-center gap-3">
@@ -117,6 +118,7 @@ const ContactPage = () => {
             href="https://github.com/Tomiwajin"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => fetch("/api/track", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ event: "contact:github" }) }).catch(() => {})}
             className="group flex items-center justify-between p-4 rounded-xl border border-theme hover:border-indigo-500/50 bg-background hover:bg-indigo-500/5 transition-all duration-200"
           >
             <div className="flex items-center gap-3">

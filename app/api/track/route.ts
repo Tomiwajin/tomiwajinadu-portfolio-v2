@@ -6,7 +6,10 @@ const eventConfig: Record<string, { emoji: string; title: string; color: number 
   "viewer:recruiter": { emoji: "🧑‍💼", title: "Recruiter View Selected",      color: 0x22c55e },
   "audio:play":       { emoji: "🔊", title: "Name Pronunciation Played",     color: 0xf59e0b },
   "email:copy":       { emoji: "📬", title: "Email Copied to Clipboard",     color: 0x3b82f6 },
-  "chess:challenge":  { emoji: "♟️", title: "Chess Challenge Clicked",        color: 0x4f46e5 },
+  "chess:challenge":  { emoji: "♟️", title: "Chess Challenge Clicked",       color: 0x4f46e5 },
+  "contact:linkedin": { emoji: "💼", title: "LinkedIn Clicked",              color: 0x0077b5 },
+  "contact:github":   { emoji: "🐙", title: "GitHub Clicked",                color: 0x333333 },
+  "project:demo":     { emoji: "🚀", title: "Project Demo Clicked",          color: 0x10b981 },
 };
 
 export async function POST(req: NextRequest) {
@@ -22,6 +25,11 @@ export async function POST(req: NextRequest) {
       dateStyle: "medium",
       timeStyle: "short",
     });
+    const rawRef = req.headers.get("referer") ?? "";
+    let source = "direct";
+    try {
+      if (rawRef) source = new URL(rawRef).hostname.replace("www.", "");
+    } catch { source = rawRef; }
 
     const config = eventConfig[event] ?? { emoji: "📊", title: event, color: 0x6b7280 };
 
@@ -39,6 +47,7 @@ export async function POST(req: NextRequest) {
           fields: [
             { name: "Device", value: device, inline: true },
             { name: "Time (ET)", value: time, inline: true },
+            { name: "Source", value: source, inline: true },
             ...extraFields,
           ],
           footer: { text: "tomiwajinadu.com · Analytics" },
